@@ -22,43 +22,41 @@ body {
 /* Startpage
 */
 
-#parallax {
+#parallax, #images {
   position: absolute; 
 	overflow: hidden;
-	width: 1400px; 
-	height: 800px; 
-	background: url(background.png) no-repeat scroll 0 0 transparent;
+	width: 850px; 
+	height: 850px;
+	top: 50px; 
 }
-#parallax img {
-  width: 50px;
+#camera {
+  background: url(background.png) no-repeat scroll 0 0 transparent;
+  width: 800px;
+  height: 800px;
+}
+
+#images {
+  top: 250px;
+  left: 300px;
+}
+#images img {
+  width: 450px;
   height: auto;
 }
-#parallax #image-1 {
-  width: 50px;
-  height: 50px;
-}
-#parallax #image-1 img {
+#images #image-1 img {
   position: absolute;
   top: 0;
-  left: 350px;
+  left: 0;
 }
-#parallax #image-2 {
-  width: 50px;
-  height: 23px;
-}
-#parallax #image-2 img {
+#images #image-2 img {
   position: absolute;
-  top: 200px;
-  left: 0px;
+  top: 0px;
+  left: 500px;
 }
-#parallax #image-3 {
-  width: 50px;
-  height: 23px;
-}
-#parallax #image-3 img {
+#images #image-3 img {
   position: absolute;
-  top: 100px;
-  left: 150px;
+  top: 400px;
+  left: 500px;
 }
 
 

@@ -1,0 +1,133 @@
+/* 
+## Hacks ##
+
+### Breaking long lines of text ###
+
+* Prevent unbroken strings from breaking the layout
+* [Source](http://stackoverflow.com/questions/320184/who-has-solved-the-long-word-breaks-my-div-problem-hint-not-stackoverflow )
+* add the **word-break** class to a paragraph to apply this hack
+
+*/
+p {
+  word-wrap: break-word;  
+}
+.word-break {
+  /* The following styles prevent unbroken strings from breaking the layout */
+  width: 100%; /* set to whatever width you need */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap; /* HP printers */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+  -moz-binding: url('xbl.xml#wordwrap'); /* Firefox (using XBL) */
+}
+
+
+
+
+/* 
+## Commonly used classes // CSS Helpers ##
+
+* **.link**  - makes an element looking like a link. On hover the cursor will be a pointer
+* **.block**  - makes sure the element fills the all available space
+* **.left, .right** - floats left or right
+* **.alignright, .alignleft, .aligncenter** - aligns right, left or center
+* **.hidden** - hide an element
+* **ul.inline-list** - displays an `<ul>` inline (like a menu)
+* **.triangle** - ads an arrow like in the [Gadgetoman theme](http://gadgetoman.myshopify.com )
+* **.mobile** - hides an element in desktop mode (it's like .hidden)
+* **#grid** - inserts a visual grid with JQuery
+* **.col** - to float left grid columns
+
+  
+*/
+
+/* The visual grid */
+.grid {
+  position: absolute;
+  top: 0;
+  opacity: .1;
+  display: block;
+  z-index: -1;
+}
+#gridh .col {
+  border-bottom: 1px solid;
+  width: 118em;
+  height: 19px; /* 1.25em = 20px - 1px border */
+}
+#gridv .col {
+  border-right: 1px solid;
+  width: 10%; 
+  height: 250em;
+  float: left;
+}
+
+.col {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+}
+.col img {
+  max-width: 100%;
+}
+
+.triangle {
+  border-style: solid;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  position: relative;
+}
+.mobile {
+  display: none;
+}
+.link {
+  cursor: pointer;
+}
+.clear {
+  clear: both;
+}
+.block {
+  width: 100%;
+  float: left;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.hidden {
+  display: none;
+}
+.alignright {
+  text-align: right;
+}
+.alignleft {
+  text-align: left;
+}
+.aligncenter {
+  text-align: center;
+}
+ul {
+  list-style-type: disc;
+}
+ul.inline-list {
+  display: block;
+  margin: 0;
+}
+ul.inline-list li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+}
+ul.inline-list li.last {
+  margin-right: 0 !important;
+}
+
+
+
+
+

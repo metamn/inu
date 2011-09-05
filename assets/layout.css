@@ -42,9 +42,12 @@ body {
 /* Content
 */
 
-#image img {
+#image img, #thumbs {
   position: fixed;
   top: 15%;
+}
+
+#thumbs {
   display: none;
 }
 
@@ -52,9 +55,9 @@ body {
   width: 700px;
 }
 #thumbs img {
-  width: 100px;
+  width: 150px;
   margin: 5% 1%;
 }
 #thumbs li {
-  vertical-align: top;
+  vertical-align: top;  /* thumbs larger than usual are put at bottom by code */
 }

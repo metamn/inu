@@ -11,47 +11,54 @@
     <link rel="stylesheet" href="assets/layout.css" />
     <link rel="stylesheet" href="assets/theme.css" />
     
-    <script type="text/javascript" src="assets/jquery-1.2.6.min.js"></script>
-    <script type="text/javascript" src="assets/jquery.jparallax.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300,400,700' rel='stylesheet' type='text/css'>
+
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script type="text/javascript" src="assets/jquery.init.js"></script>
   </head>
   
   <body class="frontpage">
   
-    <header id="header">
-      <hgroup>
-        <h1>Inu Chivu</h1>
-        <h2>Photographer</h2>
-      </hgroup>
-      <a title="Hopemage" href="/"><img title="Inu Chivu" src="assets/logo.jpg" /></a>
-    </header>
+    <aside id="sidebar">
+      <header id="header">
+        <hgroup>
+          <h1>Inu Chivu</h1>
+          <h2>Photographer</h2>
+        </hgroup>
+        <a title="Hopemage" href="/"><img title="Inu Chivu" src="assets/logo.jpg" /></a>
+      </header>
+      
+      <nav id="categories">
+        <ul>
+          <li><h3><a title="Morocco" href="/">Morocco</a></h3></li>
+          <li><h3><a title="Mongolia" href="/">Mongolia</a></h3></li>
+          <li><h3><a title="Laos" href="/">Laos</a></h3></li>
+          <li><h3><a title="Men at Work" href="/">Action</a></h3></li>
+          <li><h3><a title="Portraits" href="/">Portraits</a></h3></li>
+          <li class="last"><h3><a title="Places" href="/">Places</a></h3></li>
+        </ul>
+      </nav>
+      
+      <nav id="contact">
+        <ul>
+          <li><h3><a title="Contact me" href="/">Contact</a></h3></li>
+          <li class="last"><h3><a title="My friends" href="/">Friends</a></h3></li>
+        </ul>
+      </nav>
+    </aside>
     
-    <section id="images">
-      <div id="image-1">
-        <img src="images/action/band.jpg">
-      </div>        
-      <div id="image-2">
+    <section id="content">
+      <div id="images">
         <img src="images/action/combo.jpg">
-      </div>
-      <div id="image-3">
+        <!--
+        <img src="images/action/combo.jpg">
         <img src="images/action/costume.jpg">
-      </div>      
+        <img src="images/action/dansciuc.jpg">
+        -->
+      </div>
+      
     </section>
-    
-    <section id="parallax">
-      <div id="camera"></div>
-    </section>
-    
-    <footer id="footer">
-      <ul class="inline-list">
-        <li><a title="Morocco" href="/"><img title="Morocoo" src="assets/morocco.png" /></a>
-        <li><a title="Mongolia" href="/"><img title="Mongolia" src="assets/mongolia.png" /></a>
-        <li><a title="Laos" href="/"><img title="Laos" src="assets/laos.png" /></a>
-        <li><a title="Men at Work" href="/"><img title="Men at Work" src="assets/working.png" /></a>
-        <li><a title="Portraits" href="/"><img title="Portraits" src="assets/portraits.png" /></a>
-        <li class="last"><a title="Places" href="/"><img title="Places" src="assets/places.png" /></a>
-      </ul>
-    </footer>
   
   </body>
 </html>

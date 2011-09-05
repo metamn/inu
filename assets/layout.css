@@ -7,6 +7,24 @@ body {
 }
 
 
+/* The Grid
+*/
+
+#sidebar {
+  float: left;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  left: 5%;
+}
+
+#content {
+  width: 70%;
+  position: relative;
+  left: 30%;
+}
+
+
 /* Header
 */
 
@@ -22,58 +40,10 @@ body {
 /* Startpage
 */
 
-#parallax, #images {
-  position: absolute; 
-	overflow: hidden;
-	width: 850px; 
-	height: 850px;
-	top: 50px; 
-}
-#camera {
-  background: url(background.png) no-repeat scroll 0 0 transparent;
-  width: 800px;
-  height: 800px;
+nav h3 {
+  padding: 0 0 .612em 0;
 }
 
-#images {
-  top: 250px;
-  left: 300px;
-}
-#images img {
-  width: 450px;
-  height: auto;
-}
-#images #image-1 img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#images #image-2 img {
-  position: absolute;
-  top: 0px;
-  left: 500px;
-}
-#images #image-3 img {
-  position: absolute;
-  top: 400px;
-  left: 500px;
-}
-
-
-
-
-/* Footer
-*/
-
-#footer {
-  display: none;
-}
-
-#footer li {
-  width: 15%;
-  margin-right: 2%;
-}
-#footer li img {
-  width: 10em;
-  height: auto;
+#contact {
+  margin-top: 16em;
 }

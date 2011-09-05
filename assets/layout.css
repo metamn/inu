@@ -45,4 +45,16 @@ body {
 #image img {
   position: fixed;
   top: 15%;
+  display: none;
+}
+
+#thumbs {
+  width: 700px;
+}
+#thumbs img {
+  width: 100px;
+  margin: 5% 1%;
+}
+#thumbs li {
+  vertical-align: top;
 }

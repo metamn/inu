@@ -42,6 +42,7 @@ body {
 /* Content
 */
 
-#content {
-  display: none;
+#image img {
+  position: fixed;
+  top: 15%;
 }

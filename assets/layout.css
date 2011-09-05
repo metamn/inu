@@ -25,25 +25,23 @@ body {
 }
 
 
-/* Header
+/* Header - Sidebar
 */
 
 #header {
-  margin: 2.5em 0;
+  padding: 1.25em 0;
 }
-
 #header h1, #header h2 {
   display: none;
 }
-
-
-/* Startpage
-*/
-
-nav h3 {
+#sidebar nav h3 {
   padding: 0 0 .612em 0;
 }
 
-#contact {
-  margin-top: 16em;
+
+/* Content
+*/
+
+#content {
+  display: none;
 }

@@ -59,17 +59,20 @@ body {
   cursor: pointer;
 }
 
+#icons img {
+  width: auto;
+  height: auto;
+  margin: 5% 1% 1%;
+  cursor: pointer;
+}
 
-
-
-
-
-
-#thumbs {
-  width: 700px;
+#thumbs, #icons{
   position: fixed;
-  top: 15%;
-  display: none;  
+  top: 15%;  
+}
+#thumbs {  
+  width: 700px;  
+  display: none;
 }
 #thumbs img {
   width: 150px;

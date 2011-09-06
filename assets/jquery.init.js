@@ -1,5 +1,18 @@
 jQuery(document).ready(function(){
 
+  // Hover on icons
+  jQuery("#icons img").hover(
+    function () {
+      var title = jQuery(this).attr('title');
+      jQuery('#categories a[title="' + title + '"]').addClass('opacity-1');
+    }, 
+    function () {
+      var title = jQuery(this).attr('title');
+      jQuery('#categories a[title="' + title + '"]').removeClass('opacity-1');
+    }
+  );
+
+
   // Slide photos
   jQuery("#images #image").addClass('opacity-0');
   jQuery("#images #image:first").removeClass('opacity-0');
@@ -42,11 +55,11 @@ jQuery(document).ready(function(){
   // Hover on sidebar
   jQuery('#sidebar').hover(
     function () {
-      jQuery("#categories").addClass("opacity-1");
+      jQuery("#categories a").addClass("opacity-1");
       jQuery("#contact").addClass("opacity-1");
     }, 
     function () {
-      jQuery("#categories").removeClass("opacity-1");
+      jQuery("#categories a").removeClass("opacity-1");
       jQuery("#contact").removeClass("opacity-1");
     }
   );

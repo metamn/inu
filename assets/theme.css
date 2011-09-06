@@ -33,7 +33,7 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
 /* Header - Sidebar
 */
 
-#categories, #contact {
+#categories a, #contact {
   opacity: .5;
 }
 .opacity-1 {

@@ -39,10 +39,14 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
 .opacity-1 {
   opacity: 1 !important;
 }
-
+.opacity-0 {
+  opacity: .2;
+}
 
 /* Content
 */
+
+
 
 #thumbs img {
   border: 1px solid #656565;

@@ -22,6 +22,7 @@ body {
   width: 70%;
   position: relative;
   left: 30%;
+  overflow: hidden;
 }
 
 
@@ -42,17 +43,33 @@ body {
 /* Content
 */
 
-#image img, #thumbs {
-  position: fixed;
-  top: 15%;
+#images {
+  width: 70000px;
+  margin-top: 10em;
+}
+#images #image {
+  float: left;
+  margin-right: 1em;
+}
+#images img {
+  max-width: 700px;
+  max-height: 700px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
 }
 
-#thumbs {
-  display: none;
-}
+
+
+
+
+
 
 #thumbs {
   width: 700px;
+  position: fixed;
+  top: 15%;
+  display: none;  
 }
 #thumbs img {
   width: 150px;

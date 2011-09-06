@@ -111,9 +111,6 @@ p {
 .aligncenter {
   text-align: center;
 }
-ul {
-  list-style-type: disc;
-}
 ul.inline-list {
   display: block;
   margin: 0;

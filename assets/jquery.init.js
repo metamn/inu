@@ -3,10 +3,10 @@ jQuery(document).ready(function(){
   // Hover to display the message
   jQuery("#message").hover(
     function () {
-      jQuery("#message").addClass('opacity-1');      
+      jQuery("#message ul").addClass('opacity-1');      
     }, 
     function () {
-      jQuery("#message").removeClass('opacity-1');      
+      jQuery("#message ul").removeClass('opacity-1');      
     }
   );
 
@@ -28,45 +28,55 @@ jQuery(document).ready(function(){
   // - single click to slide
   // - double click to slideshow  
   
+  // Show only the first photo
+  jQuery("#images #image:first").addClass('active');
+  
   function animation(element) {
     element
       .animate(
         {"opacity" : "0"}, 'fast'
       )                
       .animate(
-        {"width" : "0px"}, 'slow'
+        {"width" : "0px"}, 500
       )
       .animate(
-        {"margin-right" : "0"}, 'fast'
+        {"margin-right" : "0"}, 600
       )
       .animate(
-        {top: "hide"}, 'slow'
+        {top: "hide"}, 100
     );
   }
   
   function scroll(first, next) {
     animation(first);      
-    next.addClass('active');
-    next.removeClass('opacity-0');
+    if (next.length != 0) {
+      next.addClass('active');
+      next.removeClass('opacity-0');
+    } else {
+      jQuery("#icons").show("slow");
+      jQuery("#message").hide("slow");
+    }    
   }
   
   function singleClick(e) {
     if (jQuery(this).hasClass('active')) {
-      // hide current image
+      // click on the active image
       scroll(jQuery(this), jQuery(this).next());            
     } else {
-      // hide previous image
+      // click on the next image
       scroll(jQuery(this).prev(), jQuery(this));
     }
-    jQuery("#message").addClass('opacity-0');
+    jQuery("#message ul").addClass('opacity-0');
   }
 
   function doubleClick(e) {
+    jQuery("#message ul").addClass('opacity-0');
     jQuery("#images #image").each(function(index) {
       scroll(jQuery(this).delay(5000*index), jQuery(this).next());
     });
   }
 
+  // Manage click and double click
   jQuery("#images #image").click(function(e) {
     var that = this;
     setTimeout(function() {
@@ -82,12 +92,6 @@ jQuery(document).ready(function(){
       doubleClick.call(this, e);
   });
 
-  
-  
-  
-  // Slide photos
-  jQuery("#images #image:first").addClass('active');
-  
   // Show the next photo comming
   jQuery("#images #image").hover(
     function () {

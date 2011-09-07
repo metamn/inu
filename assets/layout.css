@@ -16,18 +16,20 @@ body {
   height: 100%;
   position: fixed;
   left: 5%;
+  top: 18%;
 }
 
 #content {
   width: 70%;
   position: relative;
-  left: 30%;
+  left: 25%;
   overflow: hidden;
 }
 
 
 /* Header - Sidebar
 */
+
 
 #header {
   padding: 1.25em 0;
@@ -43,19 +45,19 @@ body {
 /* Content
 */
 
+
 #images {
   width: 70000px;
-  margin-top: 10em;
+  margin-top: 20%;
 }
 #images #image {
   float: left;
-  margin-right: 1em;
+  margin-right: 10em;
   opacity: .2;
 }
 #images #image.active {
   opacity: 1;
 }
-
 #images img {
   max-width: 700px;
   max-height: 700px;
@@ -71,7 +73,7 @@ body {
 #icons img {
   width: auto;
   height: auto;
-  margin: 5% 1% 1%;
+  margin: 5% 9% 1% 0;
   cursor: pointer;
 }
 

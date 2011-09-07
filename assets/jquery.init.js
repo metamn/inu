@@ -24,24 +24,10 @@ jQuery(document).ready(function(){
   );
 
 
-  // Slide photos
-  jQuery("#images #image:first").addClass('active');
-  
-  // Show the next photo comming
-  jQuery("#images #image").hover(
-    function () {
-      if (!(jQuery(this).hasClass('active'))) {
-        jQuery(this).addClass("opacity-1");
-      }      
-    }, 
-    function () {
-      if (!(jQuery(this).hasClass('active'))) {
-        jQuery(this).removeClass("opacity-1");
-      }
-    }
-  );
-  // Show the next photo
-  jQuery("#images #image").click(function() {
+  // Image slide and slideshow
+  // - single click slides
+  // - double click slideshow  
+  function singleClick(e) {
     if (jQuery(this).hasClass('active')) {
       // hide current image
       jQuery(this)
@@ -85,7 +71,62 @@ jQuery(document).ready(function(){
       jQuery(this).removeClass('opacity-0');
     }
     jQuery("#message").addClass('opacity-0');
+  }
+
+  function doubleClick(e) {
+    jQuery("#images #image").each(function(index) {
+      if (!(jQuery(this).hasClass('opacity-0'))) {
+        jQuery(this).delay(5000*index)
+          .animate(
+            {"opacity" : "0"}, 'fast'
+          )                
+          .animate(
+            {"width" : "0px"}, 'slow'
+          )
+          .animate(
+            {"margin-right" : "0"}, 'fast'
+          )
+          .animate(
+            {top: "hide"}, 'slow'
+        );
+      }
+    });
+  }
+
+  jQuery("#images #image").click(function(e) {
+    var that = this;
+    setTimeout(function() {
+        var dblclick = parseInt($(that).data('double'), 10);
+        if (dblclick > 0) {
+            $(that).data('double', dblclick-1);
+        } else {
+            singleClick.call(that, e);
+        }
+    }, 300);
+  }).dblclick(function(e) {
+      $(this).data('double', 2);
+      doubleClick.call(this, e);
   });
+
+  
+  
+  
+  // Slide photos
+  jQuery("#images #image:first").addClass('active');
+  
+  // Show the next photo comming
+  jQuery("#images #image").hover(
+    function () {
+      if (!(jQuery(this).hasClass('active'))) {
+        jQuery(this).addClass("opacity-1");
+      }      
+    }, 
+    function () {
+      if (!(jQuery(this).hasClass('active'))) {
+        jQuery(this).removeClass("opacity-1");
+      }
+    }
+  );
   
   
   

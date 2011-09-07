@@ -25,71 +25,45 @@ jQuery(document).ready(function(){
 
 
   // Image slide and slideshow
-  // - single click slides
-  // - double click slideshow  
+  // - single click to slide
+  // - double click to slideshow  
+  
+  function animation(element) {
+    element
+      .animate(
+        {"opacity" : "0"}, 'fast'
+      )                
+      .animate(
+        {"width" : "0px"}, 'slow'
+      )
+      .animate(
+        {"margin-right" : "0"}, 'fast'
+      )
+      .animate(
+        {top: "hide"}, 'slow'
+    );
+  }
+  
+  function scroll(first, next) {
+    animation(first);      
+    next.addClass('active');
+    next.removeClass('opacity-0');
+  }
+  
   function singleClick(e) {
     if (jQuery(this).hasClass('active')) {
       // hide current image
-      jQuery(this)
-        .animate(
-          {"opacity" : "0"}, 'fast'
-        )                
-        .animate(
-          {"width" : "0px"}, 'slow'
-        )
-        .animate(
-          {"margin-right" : "0"}, 'fast'
-        )
-        .animate(
-          {top: "hide"}, 'slow'
-      );
-      // show the next image, 
-      // or the icons if the last image is done
-      if (jQuery(this).next().length != 0) {
-        jQuery(this).next().addClass('active');    
-        jQuery(this).next().removeClass('opacity-0');
-      } else {
-        jQuery("#icons").slideToggle(); 
-      }      
+      scroll(jQuery(this), jQuery(this).next());            
     } else {
       // hide previous image
-      jQuery(this).prev()
-        .animate(
-          {"opacity" : "0"}, 'fast'
-        )                
-        .animate(
-          {"width" : "0px"}, 'slow'
-        )
-        .animate(
-          {"margin-right" : "0"}, 'fast'
-        )
-        .animate(
-          {top: "hide"}, 'slow'
-      );
-      // show the  next image
-      jQuery(this).addClass('active');    
-      jQuery(this).removeClass('opacity-0');
+      scroll(jQuery(this).prev(), jQuery(this));
     }
     jQuery("#message").addClass('opacity-0');
   }
 
   function doubleClick(e) {
     jQuery("#images #image").each(function(index) {
-      if (!(jQuery(this).hasClass('opacity-0'))) {
-        jQuery(this).delay(5000*index)
-          .animate(
-            {"opacity" : "0"}, 'fast'
-          )                
-          .animate(
-            {"width" : "0px"}, 'slow'
-          )
-          .animate(
-            {"margin-right" : "0"}, 'fast'
-          )
-          .animate(
-            {top: "hide"}, 'slow'
-        );
-      }
+      scroll(jQuery(this).delay(5000*index), jQuery(this).next());
     });
   }
 

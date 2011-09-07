@@ -33,20 +33,21 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
 /* Header - Sidebar
 */
 
-#categories a, #contact {
-  opacity: .5;
+#categories a, #contact, #message {
+  opacity: .6;
 }
 .opacity-1 {
   opacity: 1 !important;
 }
-.opacity-0 {
-  opacity: .2;
-}
+
+
 
 /* Content
 */
 
-
+#message {
+  color: #656565;
+}
 
 #thumbs img {
   border: 1px solid #656565;

@@ -1,5 +1,16 @@
 jQuery(document).ready(function(){
 
+  // Hover to display the message
+  jQuery("#message").hover(
+    function () {
+      jQuery("#message").addClass('opacity-1');      
+    }, 
+    function () {
+      jQuery("#message").removeClass('opacity-1');      
+    }
+  );
+
+
   // Hover on icons
   jQuery("#icons img").hover(
     function () {
@@ -14,20 +25,18 @@ jQuery(document).ready(function(){
 
 
   // Slide photos
-  jQuery("#images #image").addClass('opacity-0');
-  jQuery("#images #image:first").removeClass('opacity-0');
   jQuery("#images #image:first").addClass('active');
   
   // Show the next photo comming
   jQuery("#images #image").hover(
     function () {
       if (!(jQuery(this).hasClass('active'))) {
-        jQuery(this).removeClass("opacity-0");
+        jQuery(this).addClass("opacity-1");
       }      
     }, 
     function () {
       if (!(jQuery(this).hasClass('active'))) {
-        jQuery(this).addClass("opacity-0");
+        jQuery(this).removeClass("opacity-1");
       }
     }
   );
@@ -35,19 +44,47 @@ jQuery(document).ready(function(){
   jQuery("#images #image").click(function() {
     if (jQuery(this).hasClass('active')) {
       // hide current image
-      jQuery(this).addClass('hidden');
-      jQuery(this).removeClass('active');
-      // show the  next image
-      jQuery(this).next().addClass('active');    
-      jQuery(this).next().removeClass('opacity-0');
+      jQuery(this)
+        .animate(
+          {"opacity" : "0"}, 'fast'
+        )                
+        .animate(
+          {"width" : "0px"}, 'slow'
+        )
+        .animate(
+          {"margin-right" : "0"}, 'fast'
+        )
+        .animate(
+          {top: "hide"}, 'slow'
+      );
+      // show the next image, 
+      // or the icons if the last image is done
+      if (jQuery(this).next().length != 0) {
+        jQuery(this).next().addClass('active');    
+        jQuery(this).next().removeClass('opacity-0');
+      } else {
+        jQuery("#icons").slideToggle(); 
+      }      
     } else {
       // hide previous image
-      jQuery(this).prev().addClass('hidden');
-      jQuery(this).prev().removeClass('active');
+      jQuery(this).prev()
+        .animate(
+          {"opacity" : "0"}, 'fast'
+        )                
+        .animate(
+          {"width" : "0px"}, 'slow'
+        )
+        .animate(
+          {"margin-right" : "0"}, 'fast'
+        )
+        .animate(
+          {top: "hide"}, 'slow'
+      );
       // show the  next image
       jQuery(this).addClass('active');    
       jQuery(this).removeClass('opacity-0');
     }
+    jQuery("#message").addClass('opacity-0');
   });
   
   

@@ -50,7 +50,12 @@ body {
 #images #image {
   float: left;
   margin-right: 1em;
+  opacity: .2;
 }
+#images #image.active {
+  opacity: 1;
+}
+
 #images img {
   max-width: 700px;
   max-height: 700px;
@@ -59,6 +64,10 @@ body {
   cursor: pointer;
 }
 
+
+#icons {
+  display: none;
+}
 #icons img {
   width: auto;
   height: auto;

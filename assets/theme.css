@@ -2,7 +2,7 @@
 */
 
 body {
-  background: #000;
+  background: url("../design/background.png") 0 0 #000;
   color: #fff;
 }
 

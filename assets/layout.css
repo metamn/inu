@@ -13,22 +13,33 @@ body {
 #sidebar {
   float: left;
   width: 20%;
-  height: 100%;
   position: fixed;
   left: 5%;
+  bottom: 1.25em;
 }
 
 #content {
   width: 70%;
   position: relative;
   left: 25%;
-  overflow: hidden;
 }
 
 
-/* Header - Sidebar
+/* Footer
 */
 
+#triangle .triangle-top {
+  border-width: 35em;
+  bottom: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+
+
+
+/* Sidebar
+*/
 
 #header {
   padding: 1.25em 0;
@@ -47,6 +58,8 @@ body {
 
 #images {
   width: 70000px;
+  position: fixed;
+  bottom: 3.75em;
 }
 #images #image {
   float: left;
@@ -57,7 +70,7 @@ body {
 }
 #images img {
   max-width: 700px;
-  max-height: 700px;
+  max-height: 500px;
   width: auto;
   height: auto;
   cursor: pointer;
@@ -70,14 +83,10 @@ body {
 #icons img {
   width: auto;
   height: auto;
-  margin: 5% 9% 1% 0;
+  margin: 0 9% 1% 0;
   cursor: pointer;
 }
 
-#thumbs, #icons{
-  position: fixed;
-  top: 15%;  
-}
 #thumbs {  
   width: 700px;  
   display: none;

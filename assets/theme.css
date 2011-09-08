@@ -1,8 +1,8 @@
 /* Colors
 */
 
-body {
-  background: url("../design/background.png") 0 0 #000;
+body {;
+  background: #000;
   color: #fff;
 }
 
@@ -57,4 +57,12 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
   border: 1px solid #656565;
 }
 
+
+
+/* Footer 
+*/
+
+#triangle .triangle-top {
+  border-color: transparent transparent #3B1910; /*#830602;*/
+}
 

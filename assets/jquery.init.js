@@ -3,10 +3,10 @@ jQuery(document).ready(function(){
   // Hover to display the message
   jQuery("#message").hover(
     function () {
-      jQuery("#message ul").addClass('opacity-1');      
+      jQuery("#message").addClass('opacity-1');      
     }, 
     function () {
-      jQuery("#message ul").removeClass('opacity-1');      
+      jQuery("#message").removeClass('opacity-1');      
     }
   );
 
@@ -66,11 +66,11 @@ jQuery(document).ready(function(){
       // click on the next image
       scroll(jQuery(this).prev(), jQuery(this));
     }
-    jQuery("#message ul").addClass('opacity-0');
+    jQuery("#message").addClass('opacity-0');
   }
 
   function doubleClick(e) {
-    jQuery("#message ul").addClass('opacity-0');
+    jQuery("#message").addClass('opacity-0');
     jQuery("#images #image").each(function(index) {
       scroll(jQuery(this).delay(5000*index), jQuery(this).next());
     });

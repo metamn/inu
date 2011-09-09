@@ -25,15 +25,6 @@ body {
 }
 
 
-/* Footer
-*/
-
-#triangle .triangle-top {
-  border-width: 35em;
-  bottom: 0;
-  position: fixed;
-  z-index: -1;
-}
 
 
 

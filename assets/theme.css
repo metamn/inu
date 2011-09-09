@@ -19,9 +19,9 @@ a:hover {
 */
 
 body {
-  font-family: 'Comfortaa', cursive;
-  font-size:100%; 
-  line-height:1.25; 
+  font-family: MuseoSans-500;
+  font-size: 100%; 
+  line-height: 1.25; 
 }
 h1, h2, h3 { margin-top:0; margin-bottom:0; }
 h1 { font-size:2em; padding:1.25em 0; }
@@ -59,10 +59,4 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
 
 
 
-/* Footer 
-*/
-
-#triangle .triangle-top {
-  border-color: transparent transparent #3B1910; /*#830602;*/
-}
 

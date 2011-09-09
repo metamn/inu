@@ -44,13 +44,21 @@ jQuery(document).ready(function(){
       next.addClass('active');
       next.removeClass('opacity-0');
     } else {
-      next.hide();
-      jQuery("#icons").show("slow");
-      jQuery("#message").addClass("opacity-0");
+      next.hide("slow");
+      jQuery("#icons").show(1000);
+      jQuery("#title").hide('slow');
     }    
   }
   
+  function showMessage() {
+    if (!(jQuery("#message").hasClass('shown'))) {
+      jQuery("#message").show('slow').delay(1500).hide('slow');
+      jQuery("#message").addClass('shown');
+    }
+  }
+  
   function singleClick(e) {
+    showMessage();
     if (jQuery(this).hasClass('active')) {
       // click on the active image
       scroll(jQuery(this), jQuery(this).next());            
@@ -58,11 +66,10 @@ jQuery(document).ready(function(){
       // click on the next image
       scroll(jQuery(this).prev(), jQuery(this));
     }
-    jQuery("#message").addClass('opacity-0');
   }
 
   function doubleClick(e) {
-    jQuery("#message").addClass('opacity-0');
+    jQuery("#message").addClass('shown');
     jQuery("#images #image").each(function(index) {
       if (!(jQuery(this).next().hasClass('last'))) {
         scroll(jQuery(this).delay(5000*index), jQuery(this).next());
@@ -72,6 +79,7 @@ jQuery(document).ready(function(){
 
   // Manage click and double click
   jQuery("#images #image").click(function(e) {
+    jQuery("#title").addClass('opacity-02');
     var that = this;
     setTimeout(function() {
         var dblclick = parseInt($(that).data('double'), 10);
@@ -82,6 +90,7 @@ jQuery(document).ready(function(){
         }
     }, 300);
   }).dblclick(function(e) {
+      jQuery("#title").addClass('opacity-02');
       $(this).data('double', 2);
       doubleClick.call(this, e);
   });

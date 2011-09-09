@@ -46,6 +46,20 @@ body {
 /* Content
 */
 
+#title {
+  position: fixed;
+  bottom: 560px;
+  margin-left: 500px;
+}
+#message {
+  position: fixed;
+  bottom: 330px;
+  margin-left: 230px;  
+  padding: .625em;
+  z-index: 2;
+  display: none;
+}
+
 #images, #icons {
   position: fixed;
   bottom: 3.75em;

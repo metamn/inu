@@ -15,7 +15,7 @@ body {
   width: 20%;
   position: fixed;
   left: 5%;
-  bottom: 1.25em;
+  bottom: 5em;
 }
 
 #content {
@@ -85,10 +85,11 @@ body {
 
 #icons {
   display: none;
+  bottom: 1.25em;
 }
 #icons img {
-  width: auto;
-  height: auto;
+  width: 240px;
+  height: 240px;
   cursor: pointer;
 }
 

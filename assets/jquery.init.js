@@ -38,7 +38,7 @@ jQuery(document).ready(function(){
     );
   }
   
-  function scroll(first, next) {
+  function scroll2(first, next) {
     animation(first);      
     if (!(next.hasClass('last'))) {
       next.addClass('active');
@@ -49,6 +49,19 @@ jQuery(document).ready(function(){
       jQuery("#title").hide('slow');
     }    
   }
+  function scroll(first, next) {
+    if (next.hasClass('last')) {
+      first.hide("slow");
+      next.hide("slow");
+      jQuery("#icons").show(1000);
+      jQuery("#title").hide('slow');
+    } else {
+      animation(first);      
+      next.addClass('active');
+      next.removeClass('opacity-0');    
+    }    
+  }
+  
   
   function showMessage() {
     if (!(jQuery("#message").hasClass('shown'))) {
@@ -73,7 +86,7 @@ jQuery(document).ready(function(){
     jQuery("#images #image").each(function(index) {
       if (!(jQuery(this).next().hasClass('last'))) {
         scroll(jQuery(this).delay(5000*index), jQuery(this).next());
-      }
+      } 
     });
   }
 
@@ -98,6 +111,7 @@ jQuery(document).ready(function(){
   // Show the next photo comming
   jQuery("#images #image").hover(
     function () {
+      showMessage();
       if (!(jQuery(this).hasClass('active'))) {
         jQuery(this).addClass("opacity-1");
       }      

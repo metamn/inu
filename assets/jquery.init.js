@@ -1,14 +1,5 @@
 jQuery(document).ready(function(){
 
-  // Hover to display the message
-  jQuery("#message").hover(
-    function () {
-      jQuery("#message").addClass('opacity-1');      
-    }, 
-    function () {
-      jQuery("#message").removeClass('opacity-1');      
-    }
-  );
 
 
   // Hover on icons
@@ -49,12 +40,13 @@ jQuery(document).ready(function(){
   
   function scroll(first, next) {
     animation(first);      
-    if (next.length != 0) {
+    if (!(next.hasClass('last'))) {
       next.addClass('active');
       next.removeClass('opacity-0');
     } else {
+      next.hide();
       jQuery("#icons").show("slow");
-      jQuery("#message").hide("slow");
+      jQuery("#message").addClass("opacity-0");
     }    
   }
   
@@ -72,7 +64,9 @@ jQuery(document).ready(function(){
   function doubleClick(e) {
     jQuery("#message").addClass('opacity-0');
     jQuery("#images #image").each(function(index) {
-      scroll(jQuery(this).delay(5000*index), jQuery(this).next());
+      if (!(jQuery(this).next().hasClass('last'))) {
+        scroll(jQuery(this).delay(5000*index), jQuery(this).next());
+      }
     });
   }
 

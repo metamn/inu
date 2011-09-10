@@ -14,19 +14,21 @@
   width: 180px;
   height: 180px;
   border-radius: 180px;
+  -webkit-border-radius: 180px;
+  -moz-border-radius: 180px;
 }
 
 #icons .c1, #icons .c6 {
-  left: 200px;
+  left: 190px;
 }
 #icons .c2, #icons .c4 {
-  left: -50px;
+  left: -60px;
 }
 #icons .c3, #icons .c5 {
   left: 430px;
 }
 #icons .c1 {
-  top: -580px;
+  top: -590px;
 }
 #icons .c2, #icons .c3 {
   top: -500px;

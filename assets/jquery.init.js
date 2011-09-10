@@ -7,10 +7,12 @@ jQuery(document).ready(function(){
     function () {
       var title = jQuery(this).attr('title');
       jQuery('#categories a[title="' + title + '"]').addClass('opacity-1');
+      jQuery(this).addClass('highlight-border');
     }, 
     function () {
       var title = jQuery(this).attr('title');
       jQuery('#categories a[title="' + title + '"]').removeClass('opacity-1');
+      jQuery(this).removeClass('highlight-border');
     }
   );
 

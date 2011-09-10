@@ -68,6 +68,9 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
 #icons img {
   border: 3px solid #656565;
 }
+#icons img.highlight-border {
+  border-color: #a5a5a5;
+}
 
 
 #thumbs img {

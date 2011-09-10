@@ -60,12 +60,12 @@ body {
   display: none;
 }
 
-#images, #icons {
+#images {
   position: fixed;
   bottom: 3.75em;
 }
 #images {
-  width: 70000px;  
+  width: 70000px;
 }
 #images #image {
   float: left;
@@ -83,15 +83,16 @@ body {
 }
 
 
-#icons {
+#icons, #circle {
+  position: fixed;
   display: none;
-  bottom: 1.25em;
 }
 #icons img {
-  width: 240px;
-  height: 240px;
   cursor: pointer;
+  position: absolute;
 }
+
+
 
 #thumbs {  
   width: 700px;  

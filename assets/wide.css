@@ -2,6 +2,40 @@
   margin-right: 4em;
 }
 
-#icons img {
-  margin: 0 6% 1% 0;
+#icons, #circle {
+  bottom: 5em;
+  margin-left: 10em;
 }
+#circle {
+  width: 550px;
+  height: 550px;
+  border-radius: 550px;
+}
+#icons img {
+  width: 180px;
+  height: 180px;
+  border-radius: 180px;
+}
+
+#icons .c1, #icons .c6 {
+  left: 200px;
+}
+#icons .c2, #icons .c4 {
+  left: -50px;
+}
+#icons .c3, #icons .c5 {
+  left: 430px;
+}
+#icons .c1 {
+  top: -580px;
+}
+#icons .c2, #icons .c3 {
+  top: -500px;
+}
+#icons .c4, #icons .c5 {
+  top: -240px;
+}
+#icons .c6 {
+  top: -120px;
+}
+

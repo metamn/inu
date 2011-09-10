@@ -42,25 +42,29 @@ jQuery(document).ready(function(){
     return (item.hasClass('last') || item.length == 0);
   }
   
-  function scroll(first, next) {
-    if (lastItem(next)) {
-      first.hide("fast");
-      next.hide("fast");
-      jQuery("#icons").show(1000);
-      jQuery("#title").hide('slow');
-    } else {
-      animation(first);      
-      next.addClass('active');
-      next.removeClass('opacity-0');    
-    }    
-  }
-  
-  
   function showMessage() {
     if (!(jQuery("#message").hasClass('shown'))) {
       jQuery("#message").show('slow').delay(1500).hide('slow');
       jQuery("#message").addClass('shown');
     }
+  }
+  
+  function showIcons(first, next) {
+    first.hide("fast");
+    next.hide("fast");
+    jQuery("#circle").show(1000);
+    jQuery("#icons").show(1000);    
+    jQuery("#title").hide('slow');
+  }
+  
+  function scroll(first, next) {
+    if (lastItem(next)) {
+      showIcons(first, next);
+    } else {
+      animation(first);      
+      next.addClass('active');
+      next.removeClass('opacity-0');    
+    }    
   }
   
   function singleClick(e) {

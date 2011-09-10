@@ -65,6 +65,14 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
   opacity: .5;
 }
 
+#icons img {
+  border: 1px solid #656565;
+}
+#circle {
+  background: #656565;
+}
+
+
 #thumbs img {
   border: 1px solid #656565;
 }

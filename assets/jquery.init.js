@@ -2,7 +2,7 @@ jQuery(document).ready(function(){
 
 
   // Tooltips 
-  jQuery("a").tipsy({
+  jQuery("a, img").tipsy({
     gravity: 'w',
     fade: true
   });

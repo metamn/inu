@@ -14,25 +14,25 @@
   -moz-border-radius: 200px;
 }
 
-#icons .c1, #icons .c6 {
+#icons #c1, #icons #c6 {
   left: 240px;
 }
-#icons .c2, #icons .c4 {
+#icons #c2, #icons #c4 {
   left: -50px;
 }
-#icons .c3, #icons .c5 {
+#icons #c3, #icons #c5 {
   left: 530px;
 }
-#icons .c1 {
+#icons #c1 {
   top: -720px;
 }
-#icons .c2, #icons .c3 {
+#icons #c2, #icons #c3 {
   top: -590px;
 }
-#icons .c4, #icons .c5 {
+#icons #c4, #icons #c5 {
   top: -280px;
 }
-#icons .c6 {
+#icons #c6 {
   top: -140px;
 }
 #circle img {

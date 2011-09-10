@@ -17,6 +17,30 @@ a:hover, #categories a:hover {
   color: #a5a5a5;
 }
 
+/* From kuler/Firenze
+*/
+#icons #c1.highlight-border {
+  border-color: #468966;
+}
+#icons #c2.highlight-border {
+  border-color: #FFF0A5;
+}
+#icons #c3.highlight-border {
+  border-color: #FFB03B;
+}
+#icons #c4.highlight-border {
+  border-color: #B64926;
+}
+#icons #c5.highlight-border {
+  border-color: #8E2800;
+}
+#icons #c6.highlight-border {
+  border-color: #815B96;
+}
+#icons img {
+  border: 3px solid #a5a5a5;
+}
+
 
 
 /* Typography
@@ -65,12 +89,6 @@ h3 { font-size:1.23077em; padding:1.40579em 0; }
   opacity: .5;
 }
 
-#icons img {
-  border: 3px solid #656565;
-}
-#icons img.highlight-border {
-  border-color: #a5a5a5;
-}
 
 
 #thumbs img {

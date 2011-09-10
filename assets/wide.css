@@ -6,10 +6,9 @@
   bottom: 5em;
   margin-left: 10em;
 }
-#circle {
+#circle img {
   width: 550px;
   height: 550px;
-  border-radius: 550px;
 }
 #icons img {
   width: 180px;

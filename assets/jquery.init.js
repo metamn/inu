@@ -1,6 +1,11 @@
 jQuery(document).ready(function(){
 
 
+  // Tooltips 
+  jQuery("a").tipsy({
+    gravity: 'w',
+    fade: true
+  });
 
   // Hover on icons
   jQuery("#icons img").hover(

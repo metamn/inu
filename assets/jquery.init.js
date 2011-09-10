@@ -38,21 +38,14 @@ jQuery(document).ready(function(){
     );
   }
   
-  function scroll2(first, next) {
-    animation(first);      
-    if (!(next.hasClass('last'))) {
-      next.addClass('active');
-      next.removeClass('opacity-0');
-    } else {
-      next.hide("slow");
-      jQuery("#icons").show(1000);
-      jQuery("#title").hide('slow');
-    }    
+  function lastItem(item) {
+    return (item.hasClass('last') || item.length == 0);
   }
+  
   function scroll(first, next) {
-    if (next.hasClass('last')) {
-      first.hide("slow");
-      next.hide("slow");
+    if (lastItem(next)) {
+      first.hide("fast");
+      next.hide("fast");
       jQuery("#icons").show(1000);
       jQuery("#title").hide('slow');
     } else {
@@ -84,9 +77,9 @@ jQuery(document).ready(function(){
   function doubleClick(e) {
     jQuery("#message").addClass('shown');
     jQuery("#images #image").each(function(index) {
-      if (!(jQuery(this).next().hasClass('last'))) {
-        scroll(jQuery(this).delay(5000*index), jQuery(this).next());
-      } 
+      if (!lastItem(jQuery(this).next())) {
+        scroll(jQuery(this), jQuery(this).next().delay(5000*index)); 
+      }      
     });
   }
 

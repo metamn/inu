@@ -1,14 +1,30 @@
 jQuery(document).ready(function(){
 
 
-  // Categories navigation
-  jQuery("#categories li").hide();
-  jQuery("#categories li").first().show();
   
 
-  // Image slide and slideshow
-  // - single click to slide
-    
+  // Categories navigation
+  jQuery("#categories li").hide();
+  
+  var str = jQuery("#categories li h2").first().html() + jQuery("#icons").html();
+  jQuery("#categories li h2").first().html(str);
+  jQuery("#categories li.active").show();
+  
+  
+  // Click on menu icon 
+  jQuery("#menu").click(function() {
+    jQuery("#categories li").show('slow');
+  });
+  
+  
+  
+  // Click on image
+  jQuery("#images #image").click(function() {
+    if (jQuery(this).hasClass('active')) {
+      // click on the active image
+      scroll(jQuery(this), jQuery(this).next());            
+    }
+  });
   // Show only the first photo
   jQuery("#images #image:first").addClass('active');
   
@@ -27,19 +43,11 @@ jQuery(document).ready(function(){
         {top: "hide"}, 100
     );
   }
-    
+  // Do the scroll  
   function scroll(first, next) {
     animation(first);      
     next.addClass('active');      
   }
-
-  // Click on image
-  jQuery("#images #image").click(function() {
-    if (jQuery(this).hasClass('active')) {
-      // click on the active image
-      scroll(jQuery(this), jQuery(this).next());            
-    }
-  });
 
   
   

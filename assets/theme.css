@@ -1,3 +1,33 @@
+
+a, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* Header
+*/
+
+h2 span {
+  color: #ccc;
+}
+h2 span:hover {
+  color: #000;
+}
+
+nav li {
+  border-bottom: 1px solid;
+}
+nav li.active {
+  border-bottom: 1px solid #fff;
+}
+
+
+
+/* Content
+*/
+
+
 #images #image {
   background: #000;
 }

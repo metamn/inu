@@ -7,23 +7,59 @@ body {
 }
 
 
+/* Typography
+*/
+
+body { font-size:100%; line-height:1.25; }
+h1, h2, h3 { margin-top:0; margin-bottom:0; }
+h1 { font-size:1.5em; padding:1.45833em 0; }
+h2 { font-size:1.33333em; padding:1.25em 0; }
+h3 { font-size:1.16667em; padding:1.51785em 0; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
 
 /* Header
 */
 
-
 .line {
   width: 10em;
   border-bottom: 1px solid;
-  -moz-transform: rotate(-55deg);  
+  -moz-transform: rotate(-65deg);  
   margin-left: 5em;
 }
 
 nav {
-  margin-left: 7em;
+  margin-left: 10em;
 }
 nav ul {
   list-style: none;
+}
+nav li h2 {
+  padding: 0;
+}
+nav li#contact {
+  margin-top: 1.25em;
+}
+
+
+
+#icons {
+  display: none;
+}
+#menu {
+  -moz-transform: rotate(90deg);  
+  margin: .625em .312em 0 .625em;
+  position: relative;
+  top: .156em;
+}
+h2 span {
+  cursor: pointer;
 }
 
 
@@ -34,7 +70,7 @@ nav ul {
 */
 
 #images {
-  margin-top: 7em;
+  margin-top: 7.5em;
   width: 70000px;
 }
 #images #image {

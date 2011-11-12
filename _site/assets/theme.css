@@ -1,0 +1,85 @@
+/* Colors
+*/
+
+body {;
+  background: #000;
+  color: #fff;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #656565;
+}
+a:hover, #categories a:hover {
+  color: #fff;
+}
+#categories a {
+  color: #a5a5a5;
+}
+
+/* From kuler/Firenze
+*/
+#icons #c1.highlight-border {
+  border-color: #468966;
+}
+#icons #c2.highlight-border {
+  border-color: #FFF0A5;
+}
+#icons #c3.highlight-border {
+  border-color: #FFB03B;
+}
+#icons #c4.highlight-border {
+  border-color: #B64926;
+}
+#icons #c5.highlight-border {
+  border-color: #8E2800;
+}
+#icons #c6.highlight-border {
+  border-color: #815B96;
+}
+#icons img {
+  border: 3px solid #a5a5a5;
+}
+
+
+
+/* Header - Sidebar
+*/
+
+#categories a, #contact, .opacity-0 {
+  opacity: 0;
+}
+.opacity-1 {
+  opacity: 1 !important;
+}
+.opacity-02 {
+  opacity: .4 !important;
+}
+
+
+
+/* Content
+*/
+
+#image img {
+  box-shadow: 0 5px 20px -10px rgba(130, 130, 130, 0.698), 0 1px rgba(130, 130, 130, 0.1), 0 0 4px rgba(130, 130, 130, 0.1) inset;
+}
+
+#title {
+  color: #a5a5a5;
+}
+#message {
+  background: #000;
+  color: #fff;
+  opacity: .5;
+}
+
+
+
+#thumbs img {
+  border: 1px solid #656565;
+}
+
+
+
+

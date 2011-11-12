@@ -1,0 +1,42 @@
+#images #image {
+  margin-right: 4em;
+}
+
+#icons, #circle {
+  bottom: 5em;
+  margin-left: 10em;
+}
+#circle img {
+  width: 550px;
+  height: 550px;
+}
+#icons img {
+  width: 180px;
+  height: 180px;
+  border-radius: 180px;
+  -webkit-border-radius: 180px;
+  -moz-border-radius: 180px;
+}
+
+#icons #c1, #icons #c6 {
+  left: 190px;
+}
+#icons #c2, #icons #c4 {
+  left: -60px;
+}
+#icons #c3, #icons #c5 {
+  left: 430px;
+}
+#icons #c1 {
+  top: -590px;
+}
+#icons #c2, #icons #c3 {
+  top: -500px;
+}
+#icons #c4, #icons #c5 {
+  top: -240px;
+}
+#icons .c6 {
+  top: -120px;
+}
+

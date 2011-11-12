@@ -1,0 +1,129 @@
+/* Container
+*/
+
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* The Grid
+*/
+
+#sidebar {
+  float: left;
+  width: 20%;
+  position: fixed;
+  left: 5%;
+  bottom: 5em;
+}
+
+#content {
+  width: 70%;
+  position: relative;
+  margin-left: 25%;
+}
+
+
+/* Typography
+*/
+
+body {
+  font-family: MuseoSans-500;
+  font-size: 100%; 
+  line-height: 1.25; 
+}
+h1, h2, h3 { margin-top:0; margin-bottom:0; font-weight:normal; }
+h1 { font-size:2em; padding:1.25em 0; }
+h2 { font-size:1.61538em; padding:1.30936em 0; }
+h3 { font-size:1.23077em; padding:1.40579em 0; }
+
+
+
+
+/* Sidebar
+*/
+
+#header {
+  padding: 1.25em 0;
+}
+#header h1, #header h2 {
+  display: none;
+}
+#sidebar nav h3 {
+  padding: 0 0 .612em 0;
+}
+
+
+/* Content
+*/
+
+#title {
+  position: fixed;
+  bottom: 560px;
+  margin-left: 500px;
+}
+#message {
+  position: fixed;
+  bottom: 330px;
+  margin-left: 230px;  
+  padding: .625em;
+  z-index: 2;
+  display: none;
+}
+
+#images {
+  position: fixed;
+  bottom: 3.75em;
+}
+#images {
+  width: 70000px;
+}
+#images #image {
+  float: left;
+  opacity: .2;
+}
+#images #image.active {
+  opacity: 1;
+}
+#images img {
+  max-width: 700px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+
+#icons, #circle {
+  position: fixed;
+  display: none;
+}
+#icons img {
+  cursor: pointer;
+  position: absolute;
+}
+
+
+
+#thumbs {  
+  width: 700px;  
+  display: none;
+}
+#thumbs img {
+  width: 150px;
+  margin: 5% 1%;
+}
+#thumbs li {
+  vertical-align: top;  /* thumbs larger than usual are put at bottom by code */
+}
+
+
+
+
+/* Other
+*/
+
+.mobile {
+  display: none;
+}

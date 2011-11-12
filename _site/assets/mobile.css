@@ -1,0 +1,75 @@
+.desktop {
+  display: none;
+}
+.mobile {
+  display: block;
+}
+
+/* The Grid
+*/
+
+
+#sidebar {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#content {
+  width: auto;
+  top: 0;
+  margin-left: 0;
+}
+
+
+/* Typography
+*/
+
+/* Traditional, em */
+h1 { font-size:1.5em; padding:1.45833em 0; }
+h2 { font-size:1.33333em; padding:1.25em 0; }
+h3 { font-size:1.16667em; padding:1.51785em 0; }
+
+
+
+
+/* Sidebar, Header */
+nav h3 {
+  padding:0;
+}
+
+
+
+
+/* Content
+*/
+
+#title {
+  position: relative;
+  top: 0;
+  margin-left: 0;
+}
+#images {
+  position: relative;
+  top: 0;
+  width: auto;
+}
+#images #image {  
+  opacity: 1 !important;
+  margin-bottom: 1.25em;
+}
+#images #image.last {
+  display: none;
+}
+#images img {
+  width: 100% !important;
+  height: auto;
+}
+
+#categories a, #contact {
+  opacity: 1 !important;
+}
+
+#circle, #icons {
+  display: none !important;
+}

@@ -7,12 +7,26 @@ body {
 }
 
 
+/* Grid
+*/
+
+
+
 #header {
   margin-left: 10%;
 }
 #border-left {
   width: 5%;
   margin-right: 5%;
+}
+#category-image {
+  position: absolute;
+  right: 10%;  
+  top: 10%;
+  width: 150px;
+  height: 150px;
+  padding: 2.5em;
+  border-radius: 10em;  
 }
 
 
@@ -82,12 +96,14 @@ h2 span {
 #content {
   margin-top: 2.5em;
 }
-#images {
-  width: 70000px;
-}
+
 #border-left {
   height: 467px;
   float: left;
+}
+
+#images {
+  width: 70000px;
 }
 #images #image {
   float: left;

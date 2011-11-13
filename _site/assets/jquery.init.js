@@ -14,6 +14,7 @@ jQuery(document).ready(function(){
   // Click on menu icon 
   jQuery("#menu").click(function() {
     jQuery("#categories li").show('slow');
+    jQuery("#category-image").show('slow');
   });
   
   

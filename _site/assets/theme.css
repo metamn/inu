@@ -22,7 +22,7 @@ nav li.active {
 */
 
 
-#images #image, #border-left {
+#images #image, #border-left, #category-image {
   background: #000;
 }
 #images #image img {  

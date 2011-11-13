@@ -117,6 +117,13 @@ h2 span {
   cursor: pointer;
 }
 
+#images.thumb {
+  width: auto;
+}
+#images.thumb img {
+  max-width: 150px;
+}
+
 
 
 

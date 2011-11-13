@@ -30,9 +30,13 @@ nav li.active {
   z-index: -1;
 }
 
-#images #image.active {
+#images #image.active,
+#images.thumb #image {
   background: #fff;
 }
 #images #image.active img {
+  z-index: 1;
+}
+#images.thumb #image img {
   z-index: 1;
 }

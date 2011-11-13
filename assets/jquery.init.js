@@ -2,7 +2,6 @@ jQuery(document).ready(function(){
 
 
   
-
   // Categories navigation
   jQuery("#categories li").hide();
   
@@ -10,16 +9,20 @@ jQuery(document).ready(function(){
   jQuery("#categories li h2").first().html(str);
   jQuery("#categories li.active").show();
   
-  
-  // Click on menu icon 
   jQuery("#menu").click(function() {
     jQuery("#categories li").show('slow');
     jQuery("#category-image").show('slow');
   });
   
+  // Thumbs 
+  jQuery("#thumbs").click(function() {
+    jQuery("#images").addClass('thumb');
+  });
   
   
-  // Click on image
+  
+  
+  // Click on photo
   jQuery("#images #image").click(function() {
     if (jQuery(this).hasClass('active')) {
       // click on the active image

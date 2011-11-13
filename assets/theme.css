@@ -8,12 +8,6 @@ a, a:visited {
 /* Header
 */
 
-h2 span {
-  color: #ccc;
-}
-h2 span:hover {
-  color: #000;
-}
 
 nav li {
   border-bottom: 1px solid;
@@ -28,7 +22,7 @@ nav li.active {
 */
 
 
-#images #image {
+#images #image, #border-left {
   background: #000;
 }
 #images #image img {  

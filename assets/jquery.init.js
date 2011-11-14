@@ -14,11 +14,23 @@ jQuery(document).ready(function(){
     jQuery("#category-image").show('slow');
   });
   
+  
   // Thumbs 
   jQuery("#thumbs").click(function() {
     jQuery("#images").addClass('thumb');
   });
   
+  
+  // Category hover 
+  jQuery("#categories #morocco").hover(
+    function () {
+      jQuery("#category-image img").show('slow');
+    }, 
+    function () {
+      jQuery("#category-image img").hide('slow');
+    }
+  );
+
   
   
   

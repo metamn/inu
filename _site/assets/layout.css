@@ -111,7 +111,7 @@ h2 span {
 }
 #images img {
   max-width: 700px;
-  max-height: 500px;
+  max-height: 467px;
   width: auto;
   height: auto;
   cursor: pointer;
@@ -124,6 +124,9 @@ h2 span {
   max-width: 150px;
 }
 
+#category-image img {
+  display: none;
+}
 
 
 

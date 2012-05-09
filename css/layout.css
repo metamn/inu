@@ -1,0 +1,133 @@
+
+
+/* The Grid
+*/
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+#header hgroup {
+  margin-left: 10%;
+}
+
+#header nav {
+  margin-left: 22%;
+}
+
+
+#border-left {
+  width: 5%;
+  margin-right: 5%;
+}
+#category-image {
+  position: absolute;
+  right: 10%;  
+  top: 10%;
+  width: 150px;
+  height: 150px;
+  padding: 2.5em;
+  border-radius: 10em;  
+}
+
+
+
+/* Typography
+*/
+
+body { font-size:100%; line-height:1.25; }
+h1, h2, h3 { margin-top:0; margin-bottom:0; }
+h1 { font-size:1.5em; padding:1.45833em 0; }
+h2 { font-size:1.33333em; padding:1.25em 0; }
+h3 { font-size:1.16667em; padding:1.51785em 0; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+/* Header
+*/
+
+
+.line {
+  width: 10em;
+  border-bottom: 1px solid;
+  -moz-transform: rotate(-65deg);  
+  margin-left: 5em;
+}
+
+
+nav ul {
+  list-style: none;
+}
+nav li h2 {
+  padding: 0;
+}
+nav li.spacer{
+  margin-top: 2.5em;
+}
+
+
+
+#icons {
+  display: none;
+}
+#menu {
+  -moz-transform: rotate(90deg);  
+  margin: .625em .312em 0 .625em;
+  position: relative;
+  top: .156em;
+}
+h2 span {
+  cursor: pointer;
+}
+
+
+
+
+
+/* Content
+*/
+
+#content {
+  margin-top: 5em;
+}
+
+#border-left {
+  height: 467px;
+  float: left;
+}
+
+#images {
+  width: 70000px;
+}
+#images #image {
+  float: left;
+  margin-right: 4em;
+}
+#images img {
+  max-width: 700px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+#images.thumb {
+  width: auto;
+}
+#images.thumb img {
+  max-width: 150px;
+}
+
+#category-image img {
+  display: nonex;
+}
+
+
+

@@ -1,0 +1,52 @@
+
+a, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* Header
+*/
+
+
+nav li {
+  border-bottom: 1px solid;
+}
+nav li.active, nav li.spacer {
+  border-bottom: 1px solid #fff;
+}
+
+
+
+
+/* Content
+*/
+
+#category-image {
+  background: #000;
+}
+
+#images #image, #border-left {
+  background: #fff;
+}
+#images #image img {  
+  position: relative;
+  z-index: -1;
+}
+
+#images #image.active,
+#images.thumb #image {
+  background: #fff;
+}
+#images #image.active img {
+  z-index: 1;
+}
+#images.thumb #image img {
+  z-index: 1;
+}
+
+
+#body {
+  background: #000;
+  color: #fff;
+}

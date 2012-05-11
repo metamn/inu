@@ -14,13 +14,6 @@ jQuery(document).ready(function(){
     jQuery("#category-image").show('slow');
   });
   
-  
-  // Thumbs 
-  jQuery("#thumbs").click(function() {
-    jQuery("#images").addClass('thumb');
-  });
-  
-  
   // Category hover 
   jQuery("#categories #morocco").hover(
     function () {
@@ -34,12 +27,23 @@ jQuery(document).ready(function(){
   
   
   
+  // Thumbs 
+  jQuery("#thumbs").click(function() {
+    jQuery("#images").addClass('thumb');
+  });
+  
+  
   // Click on photo
   jQuery("#images #image").click(function() {
-    if (jQuery(this).hasClass('active')) {
-      // click on the active image
+    if (jQuery(this).parent().hasClass('thumb')) {
+      // Click on thumbnail
+      jQuery("#images").removeClass('thumb');
+      jQuery("#images #image").removeClass('active');
+      scroll(jQuery(this).prev(), jQuery(this));
+    } else {
+      jQuery(this).removeClass('active');   
       scroll(jQuery(this), jQuery(this).next());            
-    }
+    }    
   });
   // Show only the first photo
   jQuery("#images #image:first").addClass('active');
@@ -61,7 +65,7 @@ jQuery(document).ready(function(){
   }
   // Do the scroll  
   function scroll(first, next) {
-    animation(first);      
+    animation(first);     
     next.addClass('active');      
   }
 

@@ -6,15 +6,15 @@
 
     <title>Inu Chivu</title>
     
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/css/base.css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/css/layout.css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/css/mobile.css" media="screen and (max-width: 1024px)" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/css/wide.css" media="screen and (min-width: 1025px) and (max-width: 1399px)" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/css/large.css" media="screen and (min-width: 1400px)" />    
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/css/theme.css" />    
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/base.css" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/layout.css" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/mobile.css" media="screen and (max-width: 1024px)" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/wide.css" media="screen and (min-width: 1025px) and (max-width: 1399px)" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/large.css" media="screen and (min-width: 1400px)" />    
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/theme.css" />    
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory')?>/js/jquery.init.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory')?>/assets/jquery.init.js"></script>
     
     <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>

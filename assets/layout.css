@@ -121,8 +121,14 @@ h2 span {
 #images.thumb {
   width: auto;
 }
+#images.thumb #image, #images #image.active {
+  width: auto !important;
+  opacity: 1 !important;
+  display: block !important;
+  margin-right: 2.5em !important;
+}
 #images.thumb img {
-  max-width: 150px;
+  max-width: 250px;
 }
 
 #category-image img {

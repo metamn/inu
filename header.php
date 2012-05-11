@@ -32,12 +32,20 @@
     
       <nav>
         <ul id="categories">
-          <li class="active"><h2><a title="Latest Photos" href="<?php bloginfo('home')?>">Latest Photos</a></h2></li>
-          
+          <?php 
+            if (!(is_category() || is_page())) { ?>
+              <li class="active"><h2><a title="Latest Photos" href="<?php bloginfo('home')?>">Latest Photos</a></h2></li>  
+            <?php } ?>
           <?php $cats = get_categories();            
-            if ($cats) {            
-              foreach ($cats as $c) { ?>
-                <li>
+            if ($cats) { 
+              $current = single_cat_title('', false);           
+              foreach ($cats as $c) { 
+                $klass = '';
+                if ($current == $c->name) {
+                  $klass = 'active';
+                }
+              ?>
+                <li class="<?php echo $klass?>">
                   <h2>
                     <a href="<?php echo get_category_link( $c->term_id ) ?>" title="<?php echo $c->name ?>"><?php echo $c->name ?></a>
                   </h2>
@@ -49,8 +57,14 @@
             
           <?php $pages = get_pages();
             if ($pages) {
-              foreach ($pages as $p) { ?>
-                <li>
+              $pagename = get_query_var('pagename');
+              foreach ($pages as $p) { 
+                $klass = '';
+                if ($p->post_name == $pagename) {
+                  $klass = 'active first';
+                }                  
+              ?>
+                <li class="<?php echo $klass?>">
                   <h2>
                     <a href="<?php echo get_page_link( $p->ID ) ?>" title="<?php echo $p->post_title ?>"><?php echo $p->post_title ?></a>
                   </h2>

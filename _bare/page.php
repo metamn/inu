@@ -3,16 +3,15 @@
 <section id="content" class="block">         
       
   <?php if ( have_posts() ) : ?>
-	  <?php while ( have_posts() ) : the_post(); 
-	    
-	    $imgs = post_attachments($post->ID);
-      $img = $imgs[0];
-      $image = wp_get_attachment_image_src($img->ID, $size); ?>
-      
+	  <?php while ( have_posts() ) : the_post(); ?>	    
       <article>
-        <img src="<?php echo $image[0] ?>">
-      </article>
-      
+        <header class="entry-header">
+				  <h1 class="entry-title"><?php the_title() ?></h1>
+			  </header>
+			  <div class="entry-content">
+				  <?php the_content(); ?>
+			  </div>
+      </article>      
 		<?php endwhile; ?>
   <?php else : ?>
   	<article id="post-0" class="post no-results not-found">

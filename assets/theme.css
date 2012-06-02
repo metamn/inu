@@ -26,22 +26,18 @@ nav li.active, nav li.spacer {
   background: #000;
 }
 
-#images #image, #border-left {
+#images .image, #border-left {
   background: #fff;
 }
-#images #image img {  
+#images .image img {  
   position: relative;
   z-index: -1;
 }
 
-#images #image.active,
-#images.thumb #image {
+#images .active {
   background: #fff;
 }
-#images #image.active img {
-  z-index: 1;
-}
-#images.thumb #image img {
+#images .active img {
   z-index: 1;
 }
 

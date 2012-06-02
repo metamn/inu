@@ -13,7 +13,7 @@
         <img src="<?php echo $image[0] ?>">
       </article>
       
-		<?php endwhile; ?>
+		<?php break; endwhile; ?>
   <?php else : ?>
   	<article id="post-0" class="post no-results not-found">
 			<header class="entry-header">

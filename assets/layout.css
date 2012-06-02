@@ -10,13 +10,13 @@
 }
 
 
-#header hgroup {
+#header hgroup, #content {
   margin-left: 10%;
 }
-
 #header nav {
   margin-left: 22%;
 }
+ 
 
 
 #border-left {
@@ -107,7 +107,7 @@ h2 span {
 #images {
   width: 70000px;
 }
-#images #image {
+#images .image {
   float: left;
   margin-right: 4em;
 }
@@ -118,18 +118,19 @@ h2 span {
   cursor: pointer;
 }
 
-#images.thumb {
+
+#content #thumbs {
+  display: none;
+}
+
+#content .thumb {
   width: auto;
+  float: left;
+  margin-right: 2.5em;
 }
-#images.thumb #image, #images #image.active {
-  width: auto !important;
-  opacity: 1 !important;
-  display: block !important;
-  margin-right: 2.5em !important;
-}
-#images.thumb img {
-  max-width: 250px;
-}
+
+
+
 
 #category-image img {
   display: nonex;

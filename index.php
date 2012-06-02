@@ -2,23 +2,43 @@
 
 <section id="content" class="block">         
       
-  <div id="border-left">&nbsp;</div>
   <div id="category-image" class="hidden"><img src="/assets/morocco.jpg" /></div>
+  
+  <div id="thumbs" class="block">  
+    <?php if ( have_posts() ) { 
+      $counter = 1; 
+      
+      while ( have_posts() ) : the_post(); 
+		    
+		    $imgs = post_attachements($post->ID);
+        $img = $imgs[0];
+        $image = wp_get_attachment_image_src($img->ID, 'medium'); ?>
+        
+        <div id="thumb-<?php echo $counter ?>" class="thumb">
+          <img src="<?php echo $image[0] ?>">
+        </div>
+        
+			<?php $counter += 1; endwhile; ?> 
+	  <?php } ?>   
+  </div>
+  
       
   <div id="images">  
-    <?php if ( have_posts() ) : ?>
-		  <?php while ( have_posts() ) : the_post(); 
+    <?php if ( have_posts() ) {
+    
+      $counter = 1; 
+      while ( have_posts() ) : the_post(); 
 		    
 		    $imgs = post_attachements($post->ID);
         $img = $imgs[0];
         $image = wp_get_attachment_image_src($img->ID, $size); ?>
         
-        <div id="image">
+        <div id="image-<?php echo $counter ?>" class="image">
           <img src="<?php echo $image[0] ?>">
         </div>
         
-			<?php endwhile; ?>
-    <?php else : ?>
+			<?php $counter += 1; endwhile; ?>
+    <?php } else { ?>
     	<article id="post-0" class="post no-results not-found">
 				<header class="entry-header">
 					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
@@ -29,7 +49,7 @@
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
-	  <?php endif; ?>
+	  <?php } ?>
   </div>
 
 </section>

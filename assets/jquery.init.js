@@ -25,28 +25,31 @@ jQuery(document).ready(function(){
   );
 
   
-  
-  
   // Thumbs 
-  jQuery("#thumbs").click(function() {
-    jQuery("#images").addClass('thumb');
+  jQuery("#header #thumbs").click(function() {
+    jQuery("#content #thumbs").slideToggle();
+  });
+  
+  // Click on Thumbs 
+  jQuery("#content #thumbs .thumb").click(function() {
+    jQuery("#content #thumbs").slideUp();    
+    jQuery("#images .image").attr('style', '');
+    
+    var id = jQuery(this).attr('id');
+    id = id.replace("thumb", "image");
+    var img = jQuery("#images #" + id);
+            
+    scroll(img.prev(), img);      
   });
   
   
   // Click on photo
-  jQuery("#images #image").click(function() {
-    if (jQuery(this).parent().hasClass('thumb')) {
-      // Click on thumbnail
-      jQuery("#images").removeClass('thumb');
-      jQuery("#images #image").removeClass('active');
-      scroll(jQuery(this).prev(), jQuery(this));
-    } else {
-      jQuery(this).removeClass('active');   
-      scroll(jQuery(this), jQuery(this).next());            
-    }    
+  jQuery("#images .image").click(function() {    
+    jQuery(this).removeClass('active');   
+    scroll(jQuery(this), jQuery(this).next());              
   });
   // Show only the first photo
-  jQuery("#images #image:first").addClass('active');
+  jQuery("#images .image").first().addClass('active');
   
   function animation(element) {
     element

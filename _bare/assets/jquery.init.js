@@ -6,9 +6,6 @@ jQuery(document).ready(function(){
   jQuery("#menu-main li.current-menu-item").show();
 
 
-  // Display a single photo / post at once
-  jQuery("#content article").hide();
-  jQuery("#content article").first().show();
   
 });
 

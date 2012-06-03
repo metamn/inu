@@ -29,17 +29,12 @@ nav li.active, nav li.spacer {
 #images .image, #border-left {
   background: #fff;
 }
-#images .image img {  
-  position: relative;
-  z-index: -1;
-}
+
 
 #images .active {
   background: #fff;
 }
-#images .active img {
-  z-index: 1;
-}
+
 
 
 #body {

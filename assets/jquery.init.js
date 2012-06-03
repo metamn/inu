@@ -25,21 +25,28 @@ jQuery(document).ready(function(){
   );
 
   
-  // Thumbs 
+  // Show Thumbs 
   jQuery("#header #thumbs").click(function() {
     jQuery("#content #thumbs").slideToggle();
   });
   
-  // Click on Thumbs 
+  // Click on a thumbnail 
   jQuery("#content #thumbs .thumb").click(function() {
     jQuery("#content #thumbs").slideUp();    
-    jQuery("#images .image").attr('style', '');
     
+    // Reset all big images
+    jQuery("#images .image").attr('style', '');
+    jQuery("#images .image").addClass('inactive');
+    jQuery("#images .image").removeClass('active');
+    
+    
+    // Show the current image
     var id = jQuery(this).attr('id');
     id = id.replace("thumb", "image");
     var img = jQuery("#images #" + id);
-            
-    scroll(img.prev(), img);      
+    
+    img.removeClass('inactive');
+    scroll(img.prev(), img);          
   });
   
   
@@ -69,7 +76,8 @@ jQuery(document).ready(function(){
   // Do the scroll  
   function scroll(first, next) {
     animation(first);     
-    next.addClass('active');      
+    next.addClass('active');  
+    next.removeClass('inactive');      
   }
 
   

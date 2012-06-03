@@ -7,6 +7,7 @@
 .container {
   width: 100%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 
@@ -111,11 +112,23 @@ h2 span {
   float: left;
   margin-right: 4em;
 }
-#images img {
+#images .image img {
   max-width: 700px;
   width: auto;
   height: auto;
   cursor: pointer;
+  position: relative;
+  z-index: -1;
+}
+
+#images .active img {
+  z-index: 1;
+}
+#images .inactive {
+  opacity: 0;
+  width: 0;
+  margin-right: 0;
+  display: none;
 }
 
 
@@ -127,6 +140,7 @@ h2 span {
   width: auto;
   float: left;
   margin-right: 2.5em;
+  cursor: pointer;
 }
 
 

@@ -135,7 +135,6 @@ h2 span {
 #content #thumbs {
   display: none;
 }
-
 #content .thumb {
   width: auto;
   float: left;
@@ -144,11 +143,14 @@ h2 span {
 }
 
 
-
-
 #category-image img {
   display: nonex;
 }
 
 
 
+
+#content.page {
+  width: 90%;
+  padding: 1.25em 0 1.25em 1.25em;
+}

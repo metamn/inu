@@ -1,3 +1,7 @@
+#body {
+  background: #000;
+  color: #fff;
+}
 
 a, a:visited {
   color: #000;
@@ -37,7 +41,15 @@ nav li.active, nav li.spacer {
 
 
 
-#body {
+/* Page
+*/
+
+#content.page {
   background: #000;
   color: #fff;
 }
+#content.page a, #content.page a:visited {
+  background: #fff;
+  color: #000;
+}
+

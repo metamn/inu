@@ -5,8 +5,8 @@ jQuery(document).ready(function(){
   // Categories navigation
   jQuery("#categories li").hide();
   
-  var str = jQuery("#categories li h2").first().html() + jQuery("#icons").html();
-  jQuery("#categories li h2").first().html(str);
+  var str = jQuery("#categories li.active h2").first().html() + jQuery("#icons").html();
+  jQuery("#categories li.active h2").html(str);
   jQuery("#categories li.active").show();
   
   jQuery("#menu").click(function() {

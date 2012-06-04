@@ -1,0 +1,35 @@
+#header hgroup, #content {
+  margin-left: 5%;
+}
+#header nav {
+  margin-left: 0;
+  font-size: smaller;  
+}
+#content.page  {
+  width: 80%;
+}
+#header nav li.spacer {
+  margin-top: 1.25em;
+}
+#header nav li a, #header nav li a:visited {
+  color: #aaa;
+}
+
+.line {
+  width: 10em;
+  border-bottom: 1px solid;
+  -moz-transform: rotate(0deg); 
+  -webkit-transform: rotate(0deg); 
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  margin-left: 5em;
+}
+
+
+
+#content.page {
+  padding: 0;
+  margin: 0;
+}
+

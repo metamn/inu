@@ -8,10 +8,10 @@
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/base.css" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/layout.css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/mobile.css" media="screen and (max-width: 1024px)" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/wide.css" media="screen and (min-width: 1025px) and (max-width: 1399px)" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/large.css" media="screen and (min-width: 1400px)" />    
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/theme.css" />    
+    
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/mobile.css" media="screen and (max-width: 640px)" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/tablet.css" media="screen and (min-width: 641px) and (max-width: 1024px)" />
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory')?>/assets/jquery.init.js"></script>

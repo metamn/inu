@@ -17,13 +17,12 @@
 #header nav {
   margin-left: 22%;
 }
+#content.page  {
+  width: 90%;
+}
+
  
 
-
-#border-left {
-  width: 5%;
-  margin-right: 5%;
-}
 #category-image {
   position: absolute;
   right: 10%;  
@@ -59,7 +58,11 @@ body {
 .line {
   width: 10em;
   border-bottom: 1px solid;
-  -moz-transform: rotate(-65deg);  
+  -moz-transform: rotate(-65deg); 
+  -webkit-transform: rotate(-65deg); 
+  -o-transform: rotate(-65deg);
+  -ms-transform: rotate(-65deg);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.72);
   margin-left: 5em;
 }
 
@@ -81,6 +84,12 @@ nav li.spacer{
 }
 #menu {
   -moz-transform: rotate(90deg);  
+  -webkit-transform: rotate(90deg); 
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  display: inline-block;
+  
   margin: .625em .312em 0 .625em;
   position: relative;
   top: .156em;
@@ -98,11 +107,6 @@ h2 span {
 
 #content {
   margin-top: 5em;
-}
-
-#border-left {
-  height: 467px;
-  float: left;
 }
 
 #images {
@@ -149,8 +153,6 @@ h2 span {
 
 
 
-
-#content.page {
-  width: 90%;
-  padding: 1.25em 0 1.25em 1.25em;
+#content.page article {
+  padding: 1.25em;
 }

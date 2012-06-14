@@ -90,7 +90,7 @@
         
         <div id="icons">
           <span id="menu">></span>
-          <span id="thumbs">:::</span>
+          <span id="thumbs" class="desktop">:::</span>
         </div>
       </nav>
     </header>

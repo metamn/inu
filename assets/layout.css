@@ -1,3 +1,7 @@
+.mobile {
+  display: none !important; 
+}
+
 
 
 /* The Grid
@@ -19,18 +23,6 @@
 }
 #content.page  {
   width: 90%;
-}
-
- 
-
-#category-image {
-  position: absolute;
-  right: 10%;  
-  top: 10%;
-  width: 150px;
-  height: 150px;
-  padding: 2.5em;
-  border-radius: 10em;  
 }
 
 
@@ -90,7 +82,7 @@ nav li.spacer{
   filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   display: inline-block;
   
-  margin: .625em .312em 0 .625em;
+  margin: .625em .625em 0 2.5em;
   position: relative;
   top: .156em;
 }

@@ -14,17 +14,7 @@ jQuery(document).ready(function(){
     jQuery("#category-image").show('slow');
   });
   
-  // Category hover 
-  jQuery("#categories #morocco").hover(
-    function () {
-      jQuery("#category-image img").show('slow');
-    }, 
-    function () {
-      jQuery("#category-image img").hide('slow');
-    }
-  );
-
-  
+    
   // Show Thumbs 
   jQuery("#header #thumbs").click(function() {
     jQuery("#content #thumbs").slideToggle();

@@ -1,12 +1,26 @@
+.desktop {
+  display: none !important;
+}
+
+
+.container {
+  width: 98%;
+  margin: 0 auto;
+}
+
+
 #header hgroup, #content {
   margin-left: 5%;
 }
+#header h1 {
+  padding: 0.312em 0;
+}
 #header nav {
-  margin-left: 0;
+  margin-left: 5%;
   font-size: smaller;  
 }
-#content.page  {
-  width: 80%;
+#header nav ul {
+  margin: 0;
 }
 #header nav li.spacer {
   margin-top: 1.25em;
@@ -16,20 +30,35 @@
 }
 
 .line {
-  width: 10em;
-  border-bottom: 1px solid;
-  -moz-transform: rotate(0deg); 
-  -webkit-transform: rotate(0deg); 
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
-  margin-left: 5em;
+  display: none;
 }
 
 
+/* Content
+*/
+
+#content {
+  margin-top: 2.5em;
+}
+
+#images {
+  width: auto;
+}
+#images .image {
+  margin-right: 0;
+  margin-bottom: 2.5em;
+}
+#images .image img {
+  width: 90%;
+  height: auto;
+  z-index: 1;
+  opacity: 1;
+  display: block;
+}
 
 #content.page {
   padding: 0;
   margin: 0;
+  width: 80%;
 }
 

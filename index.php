@@ -2,11 +2,6 @@
 
 <section id="content" class="block">         
   
-  <!--    
-  <div id="category-image" class="hidden"><img src="/assets/morocco.jpg" /></div>
-  -->
-  
-  
   <div id="thumbs" class="block">  
     <?php if ( have_posts() ) { 
       $counter = 1; 

@@ -5,7 +5,7 @@
   <?php if ( have_posts() ) : ?>
 	  <?php while ( have_posts() ) : the_post(); ?>	    
       <article>
-        <header class="entry-header">
+        <header class="hidden entry-header">
 				  <h1 class="entry-title"><?php the_title() ?></h1>
 			  </header>
 			  <div class="entry-content">

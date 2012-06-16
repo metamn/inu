@@ -34,9 +34,9 @@
         <ul id="categories">
           <?php 
             if (!(is_category() || is_page())) { ?>
-              <li class="active"><h2><a title="Latest Photos" href="<?php bloginfo('home')?>">Latest Photos</a></h2></li>  
+              <li class="active"><h2><a title="Latest Photos" href="<?php bloginfo('home')?>">Photography</a></h2></li>  
             <?php } ?>
-          <?php $cats = get_categories();            
+          <?php $cats = get_categories('orderby=count');            
             if ($cats) { 
               $current = single_cat_title('', false);           
               foreach ($cats as $c) { 
@@ -72,20 +72,6 @@
               <?php } 
             }          
           ?>
-          
-          
-          
-          <!--
-          
-          <li id="morocco" class="first"><h2><a title="Morocco" href="/">morocco</a></h2></li>
-          <li><h2><a title="Mongolia" href="/">mongolia</a></h2></li>
-          <li><h2><a title="Laos" href="/">laos</a></h2></li>
-          <li><h2><a title="Men at Work" href="/">action</a></h2></li>
-          <li><h2><a title="Portraits" href="/">portraits</a></h2></li>
-          <li><h2><a title="Places" href="/">places</a></h2></li>
-          <li id="contact"><h2><a title="Contact" href="/contact">contact</a></h2></li>
-          <li><h2><a title="Friends" href="/">friends</a></h2></li>
-          -->
         </ul>
         
         <div id="icons">

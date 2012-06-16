@@ -148,3 +148,6 @@ h2 span {
 #content.page article {
   padding: 1.25em;
 }
+#content.page article h1, #content.page article h2, #content.page article h3 {
+  font-weight: bold;
+}

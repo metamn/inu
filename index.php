@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
-<section id="content" class="block">         
+<section id="content" class="block"> 
+
+  <?php if (is_home()) {
+    query_posts( 'posts_per_page=5' );  
+  } ?>        
   
   <div id="thumbs" class="block">  
     <?php if ( have_posts() ) { 
@@ -49,6 +53,10 @@
 			</article><!-- #post-0 -->
 	  <?php } ?>
   </div>
+  
+  <?php if (is_home()) {
+    wp_reset_query(); 
+  } ?>  
 
 </section>
 

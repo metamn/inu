@@ -12,9 +12,8 @@ a, a:visited {
 /* Header
 */
 
-
 nav li {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #aaa;
 }
 nav li.active, nav li.spacer {
   border-bottom: 1px solid #fff;

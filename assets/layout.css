@@ -14,12 +14,20 @@
   overflow-x: hidden;
 }
 
+#header {
+  margin: 0;
+  padding: 0;
+}
 
 #header hgroup, #content {
   margin-left: 10%;
 }
 #header nav {
   margin-left: 22%;
+}
+
+#content {
+  width: 95%;
 }
 #content.page  {
   width: 90%;

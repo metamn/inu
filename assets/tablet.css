@@ -1,6 +1,22 @@
+#header {
+  font-size: small;
+}
 #header hgroup, #content {
   margin-left: 5%;
 }
 #header nav {
-  margin-left: 25%;
+  margin-left: 15%;
+}
+#header .line {
+  margin-left: 3em;
+}
+
+#content {
+  margin-top: 3.75em;
+}
+#content .thumb {
+  max-width: 250px;
+}
+#images .image img {
+  max-width: 600px;
 }

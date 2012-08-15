@@ -3,7 +3,7 @@
 <section id="content" class="block"> 
 
   <?php if (is_home()) {
-    query_posts( 'posts_per_page=5' );  
+    query_posts( 'posts_per_page=10' );  
   } ?>        
   
   <div id="thumbs" class="block">  

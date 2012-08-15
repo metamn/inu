@@ -50,5 +50,6 @@ nav li.active, nav li.spacer {
 #content.page a, #content.page a:visited {
   background: #fff;
   color: #000;
+  padding: .5em;
 }
 

@@ -20,10 +20,8 @@
     <?php wp_head(); ?>
   </head>
   
-  <body>
-        
-    <div class="container">
-  
+  <body>        
+    <div class="container">  
     <header id="header" class="block">
       <hgroup>
         <h1><a title="inu chivu" href="<?php bloginfo('home')?>">Inu Chivu</a></h1>

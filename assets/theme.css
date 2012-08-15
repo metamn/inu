@@ -51,5 +51,6 @@ nav li.active, nav li.spacer {
   background: #fff;
   color: #000;
   padding: .5em;
+  display: inline-block;
 }
 

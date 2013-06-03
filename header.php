@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/base.css" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/layout.css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/theme.css" />    
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/theme.css?20130603a" />    
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/mobile.css" media="screen and (max-width: 640px)" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/tablet.css" media="screen and (min-width: 641px) and (max-width: 1024px)" />

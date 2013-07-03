@@ -3,6 +3,12 @@
 }
 
 
+#banner {
+  position: absolute;
+  right: 0;
+  margin: 1.25em 1.25em 0 0;
+}
+
 
 /* The Grid
 */

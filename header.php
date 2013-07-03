@@ -7,8 +7,8 @@
     <title>Inu Chivu</title>
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/base.css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/layout.css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/theme.css?20130603a" />    
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/layout.css?20130703a" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/theme.css?20130703" />    
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/mobile.css" media="screen and (max-width: 640px)" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/tablet.css" media="screen and (min-width: 641px) and (max-width: 1024px)" />
@@ -21,6 +21,10 @@
   </head>
   
   <body>        
+    <div id="banner" class="desktop">
+      <img src="<?php bloginfo('stylesheet_directory')?>/assets/on-vacation.png"/>
+    </div>
+    
     <div class="container">  
     <header id="header" class="block">
       <hgroup>

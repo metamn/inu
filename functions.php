@@ -1,6 +1,8 @@
 <?php
 
 // Get post attachements
+// - they are all images resized on upload to predefined sizes
+
 function post_attachements($post_id) {  
   $args = array(
 	  'post_type' => 'attachment',

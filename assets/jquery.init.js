@@ -1,8 +1,14 @@
+/*
+
+  - Animations for the menu and looping through the posts / images
+
+*/
+
 jQuery(document).ready(function(){
-
-
   
   // Categories navigation
+  // - according to the requirement the active category must be differentiated from the rest by showing the two icons at the left side
+  
   jQuery("#categories li").hide();
   
   var str = jQuery("#categories li.active h2").first().html() + jQuery("#icons").html();
@@ -14,13 +20,20 @@ jQuery(document).ready(function(){
     jQuery("#category-image").show('slow');
   });
   
+  
+  
     
   // Show Thumbs 
   jQuery("#header #thumbs").click(function() {
     jQuery("#content #thumbs").slideToggle();
   });
   
+  
+  
+  
   // Click on a thumbnail 
+  // - will display the clicked thumbnail as a large image
+  
   jQuery("#content #thumbs .thumb").click(function() {
     jQuery("#content #thumbs").slideUp();    
     
@@ -48,6 +61,8 @@ jQuery(document).ready(function(){
   // Show only the first photo
   jQuery("#images .image").first().addClass('active');
   
+  
+  // The scrolling effect
   function animation(element) {
     element
       .animate(

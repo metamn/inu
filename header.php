@@ -20,60 +20,64 @@
     <?php wp_head(); ?>
   </head>
   
-  <body>        
-    <div id="banner" class="desktop">
-      <img src="<?php bloginfo('stylesheet_directory')?>/assets/on-vacation.png"/>
-    </div>
-    
+  <body> 
     <div class="container">  
     <header id="header" class="block">
       <hgroup>
-        <h1><a title="inu chivu" href="<?php bloginfo('home')?>">Inu Chivu</a></h1>
+        <h1><a title="Inu Chivu" href="<?php bloginfo('home')?>">Inu Chivu</a></h1>
         <div class="line"></div>
       </hgroup>
     
       <nav>
         <ul id="categories">
           <?php 
+            
+            /* The Menu
+              - Every category and page will be displayed as a menu item, categories first
+              - They will be separated by white space in the list
+              - This is automatic, the editor has nothing to set up or configure
+            */
+            
             if (!(is_category() || is_page())) { ?>
               <li class="active"><h2><a title="Latest Photos" href="<?php bloginfo('home')?>">Photography</a></h2></li>  
             <?php } ?>
-          <?php $cats = get_categories('orderby=count');            
-            if ($cats) { 
-              $current = single_cat_title('', false);           
-              foreach ($cats as $c) { 
-                $klass = '';
-                if ($current == $c->name) {
-                  $klass = 'active';
-                }
-              ?>
-                <li class="<?php echo $klass?>">
-                  <h2>
-                    <a href="<?php echo get_category_link( $c->term_id ) ?>" title="<?php echo $c->name ?>"><?php echo $c->name ?></a>
-                  </h2>
-                </li>                
-              <?php }            
-            } ?>
+            
+            <?php $cats = get_categories('orderby=count');            
+              if ($cats) { 
+                $current = single_cat_title('', false);           
+                foreach ($cats as $c) { 
+                  $klass = '';
+                  if ($current == $c->name) {
+                    $klass = 'active';
+                  }
+                ?>
+                  <li class="<?php echo $klass?>">
+                    <h2>
+                      <a href="<?php echo get_category_link( $c->term_id ) ?>" title="<?php echo $c->name ?>"><?php echo $c->name ?></a>
+                    </h2>
+                  </li>                
+                <?php }            
+              } ?>
             
             <li class="spacer"></li>
             
-          <?php $pages = get_pages();
-            if ($pages) {
-              $pagename = get_query_var('pagename');
-              foreach ($pages as $p) { 
-                $klass = '';
-                if ($p->post_name == $pagename) {
-                  $klass = 'active first';
-                }                  
-              ?>
-                <li class="<?php echo $klass?>">
-                  <h2>
-                    <a href="<?php echo get_page_link( $p->ID ) ?>" title="<?php echo $p->post_title ?>"><?php echo $p->post_title ?></a>
-                  </h2>
-                </li>                
-              <?php } 
-            }          
-          ?>
+            <?php $pages = get_pages();
+              if ($pages) {
+                $pagename = get_query_var('pagename');
+                foreach ($pages as $p) { 
+                  $klass = '';
+                  if ($p->post_name == $pagename) {
+                    $klass = 'active first';
+                  }                  
+                ?>
+                  <li class="<?php echo $klass?>">
+                    <h2>
+                      <a href="<?php echo get_page_link( $p->ID ) ?>" title="<?php echo $p->post_title ?>"><?php echo $p->post_title ?></a>
+                    </h2>
+                  </li>                
+                <?php } 
+              }          
+            ?>
         </ul>
         
         <div id="icons">

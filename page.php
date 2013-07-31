@@ -1,7 +1,14 @@
+<?php 
+
+/* A simple template to display page content
+*/
+
+?>
+
+
 <?php get_header(); ?>
 
-<section id="content" class="page block">         
-      
+<section id="content" class="page block"> 
   <?php if ( have_posts() ) : ?>
 	  <?php while ( have_posts() ) : the_post(); ?>	    
       <article>

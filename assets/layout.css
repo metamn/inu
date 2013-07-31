@@ -1,7 +1,17 @@
+/* Layout.css
+
+  - This file defines the grid and the typography 
+  - Then the horizontal and vertical alignment of all elements
+  - Definitions form this file can be overwritten later in theme.css and the other responsive stylesheets
+  
+*/
+
 .mobile {
   display: none !important; 
 }
 
+/* This is removed temporarily
+*/
 
 #banner {
   position: absolute;
@@ -11,6 +21,11 @@
 
 
 /* The Grid
+
+  - a simple, left aligned grid with lots of white space at the right side of the monitor
+  - this way the focus is on that single photo displayed
+  - nothing fancy, show the image, that's all
+  
 */
 
 
@@ -42,6 +57,9 @@
 
 
 /* Typography
+
+  - Values are taken from iain.cc/typograph
+  
 */
 
 body { font-size:100%; line-height:1.25; }
@@ -58,6 +76,10 @@ body {
 
 
 /* Header
+
+  - this separator line looks fine even in IE
+  - it makes the user to look down to the image
+  
 */
 
 
@@ -109,6 +131,11 @@ h2 span {
 
 
 /* Content
+
+  - all images are aligned left, in one single horizontal row
+  - the first image is shown by setting z-index, the others are all hidden
+  - on clicking an image the next in the row will be shown
+  
 */
 
 #content {
@@ -124,6 +151,8 @@ h2 span {
 }
 #images .image img {
   max-width: 700px;
+  max-height: 500px;
+  
   width: auto;
   height: auto;
   cursor: pointer;
@@ -142,6 +171,8 @@ h2 span {
 }
 
 
+/* Thumbnails will be displayed asymmetric to drive more attention
+*/
 #content #thumbs {
   display: none;
 }
@@ -152,7 +183,8 @@ h2 span {
   cursor: pointer;
 }
 
-
+/* These category icons were removed
+*/
 #category-image img {
   display: nonex;
 }

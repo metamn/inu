@@ -1,3 +1,11 @@
+/* Mobile.css
+
+  - it is simpler than desktop by a) the separator line in header removed
+  - b) not just a single image is shown but all of them
+  - basically mobile version is like the desktop version of thumbnails
+   
+*/
+
 .desktop {
   display: none !important;
 }

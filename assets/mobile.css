@@ -28,14 +28,15 @@
   font-size: smaller;  
 }
 #header nav ul {
-  margin: 0;
+  margin-right: 0.16em;
+}
+#header nav li.active {
+  margin-right: 2.5em;
 }
 #header nav li.spacer {
   margin-top: 1.25em;
 }
-#header nav li a, #header nav li a:visited {
-  color: #aaa;
-}
+
 
 .line {
   display: none;

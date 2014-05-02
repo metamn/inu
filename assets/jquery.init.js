@@ -39,6 +39,7 @@ jQuery(document).ready(function(){
   // Click on a thumbnail 
   // - will display the clicked thumbnail as a large image
   jQuery("#content #thumbs .thumb").click(function() {
+    jQuery("#content #images").show('slow');
     jQuery("#content #thumbs").slideUp();    
     
     // Reset all big images
@@ -54,8 +55,6 @@ jQuery(document).ready(function(){
     
     img.removeClass('inactive');
     scroll(img.prev(), img);          
-    
-    jQuery("#content #images").show();
   });
   
   

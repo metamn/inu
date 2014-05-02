@@ -12,6 +12,9 @@ a, a:visited {
 /* Header
 */
 
+#header p {
+  color: #aaa;
+}
 nav li {
   border-bottom: 1px solid #aaa;
 }
@@ -19,8 +22,7 @@ nav li.active, nav li.spacer {
   border-bottom: 1px solid #fff;
 }
 nav li:hover h2 a {
-  background: #000;
-  color: #fff;
+  font-style: italic;
 }
 
 
@@ -77,10 +79,6 @@ body.inverted nav li {
 }
 body.inverted nav li.active, body.inverted nav li.spacer {
   border-bottom: 1px solid #000;
-}
-body.inverted nav li:hover h2 a {
-  background: #fff;
-  color: #000;
 }
 
 body.inverted #category-image {

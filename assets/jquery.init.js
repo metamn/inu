@@ -21,7 +21,17 @@ jQuery(document).ready(function(){
   // Invert colors
   jQuery("#header #icons #change-color").click(function() {
     jQuery('body').toggleClass('inverted');
+    if (jQuery('body').hasClass('inverted')) {
+      jQuery.cookie('inverted-color-scheme', 'true')
+    } else {
+      jQuery.removeCookie('inverted-color-scheme');
+    }
   });
+  
+  // Set color scheme based on cookies
+  if (jQuery.cookie('inverted-color-scheme')) {
+    jQuery('body').addClass('inverted');
+  }
     
   
   

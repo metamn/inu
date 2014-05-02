@@ -1,5 +1,12 @@
 </div> <!-- container -->
 
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory')?>/assets/jquery.cookie.js"></script>
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory')?>/assets/jquery.init.js"></script>
+
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

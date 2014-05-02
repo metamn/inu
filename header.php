@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/mobile.css" media="screen and (max-width: 640px)" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/assets/tablet.css" media="screen and (min-width: 641px) and (max-width: 1024px)" />
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory')?>/assets/jquery.init.js"></script>
     
     <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>

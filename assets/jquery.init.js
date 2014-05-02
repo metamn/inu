@@ -54,6 +54,8 @@ jQuery(document).ready(function(){
     
     img.removeClass('inactive');
     scroll(img.prev(), img);          
+    
+    jQuery("#content #images").show();
   });
   
   

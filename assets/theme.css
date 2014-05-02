@@ -8,16 +8,6 @@ a, a:visited {
 }
 
 
-body.inverted {
-  background: #000;
-  color: #fff;
-}
-body.inverted a, body.inverted a:visited {
-  color: #fff;
-}
-
-
-
 
 /* Header
 */
@@ -27,6 +17,10 @@ nav li {
 }
 nav li.active, nav li.spacer {
   border-bottom: 1px solid #fff;
+}
+nav li:hover h2 a {
+  background: #000;
+  color: #fff;
 }
 
 
@@ -64,3 +58,47 @@ nav li.active, nav li.spacer {
   display: inline-block;
 }
 
+
+
+
+/* Inverted
+*/
+
+body.inverted {
+  background: #000;
+  color: #fff;
+}
+body.inverted a, body.inverted a:visited {
+  color: #fff;
+}
+
+body.inverted nav li {
+  border-bottom: 1px solid #333;
+}
+body.inverted nav li.active, body.inverted nav li.spacer {
+  border-bottom: 1px solid #000;
+}
+body.inverted nav li:hover h2 a {
+  background: #fff;
+  color: #000;
+}
+
+body.inverted #category-image {
+  background: #fff;
+}
+body.inverted #images .image, body.inverted #border-left {
+  background: #000;
+}
+body.inverted #images .active {
+  background: #000;
+}
+
+
+body.inverted #content.page {
+  background: #fff;
+  color: #000;
+}
+body.inverted #content.page a, body.inverted #content.page a:visited {
+  background: #000;
+  color: #fff;
+}

@@ -28,7 +28,6 @@ jQuery(document).ready(function(){
   
   // Click on a thumbnail 
   // - will display the clicked thumbnail as a large image
-  
   jQuery("#content #thumbs .thumb").click(function() {
     jQuery("#content #thumbs").slideUp();    
     
@@ -79,7 +78,5 @@ jQuery(document).ready(function(){
     next.addClass('active');  
     next.removeClass('inactive');      
   }
-
-  
   
 });

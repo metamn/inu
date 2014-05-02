@@ -115,10 +115,6 @@ nav li {
 nav li.active {
   display: block;
 }
-nav li:hover h2 a {
-  background: #000;
-  color: #fff;
-}
 nav li h2 {
   padding: 0;
 }

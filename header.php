@@ -24,40 +24,31 @@
     <div class="container">  
     <header id="header" class="block">
       <hgroup>
-        <h1><a title="Inu Chivu" href="<?php bloginfo('home')?>">Inu Chivu</a></h1>
+        <h1>
+          <a title="Inu Chivu" href="<?php echo get_bloginfo('url')?>">Inu Chivu</a>
+        </h1>
+        <p>photographer</p>
         <div class="line"></div>
       </hgroup>
     
       <nav>
         <ul id="categories">
-          <?php 
-            
-            /* The Menu
-              - Every category and page will be displayed as a menu item, categories first
-              - They will be separated by white space in the list
-              - This is automatic, the editor has nothing to set up or configure
-            */
-            
-            if (!(is_category() || is_page())) { ?>
-              <li class="active"><h2><a title="Latest Photos" href="<?php bloginfo('home')?>">Photography</a></h2></li>  
-            <?php } ?>
-            
-            <?php $cats = get_categories('orderby=count');            
-              if ($cats) { 
-                $current = single_cat_title('', false);           
-                foreach ($cats as $c) { 
-                  $klass = '';
-                  if ($current == $c->name) {
-                    $klass = 'active';
-                  }
-                ?>
-                  <li class="<?php echo $klass?>">
-                    <h2>
-                      <a href="<?php echo get_category_link( $c->term_id ) ?>" title="<?php echo $c->name ?>"><?php echo $c->name ?></a>
-                    </h2>
-                  </li>                
-                <?php }            
-              } ?>
+          <?php $cats = get_categories('orderby=count');            
+            if ($cats) { 
+              $current = single_cat_title('', false);           
+              foreach ($cats as $c) { 
+                $klass = '';
+                if ($current == $c->name) {
+                  $klass = 'active';
+                }
+              ?>
+                <li class="<?php echo $klass?>">
+                  <h2>
+                    <a href="<?php echo get_category_link( $c->term_id ) ?>" title="<?php echo $c->name ?>"><?php echo $c->name ?></a>
+                  </h2>
+                </li>                
+              <?php }            
+            } ?>
             
             <li class="spacer"></li>
             
@@ -83,7 +74,9 @@
         <div id="icons">
           <span id="menu">></span>
           <span id="thumbs" class="desktop">:::</span>
+          <span id="change-color"></span>
         </div>
+        
       </nav>
     </header>
     

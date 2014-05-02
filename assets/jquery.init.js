@@ -6,28 +6,23 @@
 
 jQuery(document).ready(function(){
   
-  // Categories navigation
-  // - according to the requirement the active category must be differentiated from the rest by showing the two icons at the left side
-  
-  jQuery("#categories li").hide();
-  
-  var str = jQuery("#categories li.active h2").first().html() + jQuery("#icons").html();
-  jQuery("#categories li.active h2").html(str);
-  jQuery("#categories li.active").show();
-  
-  jQuery("#menu").click(function() {
+  // Show categories
+  jQuery("#header #icons #menu").click(function() {
     jQuery("#categories li").show('slow');
-    jQuery("#category-image").show('slow');
+    jQuery("#content").slideUp();
   });
-  
-  
-  
     
   // Show Thumbs 
-  jQuery("#header #thumbs").click(function() {
+  jQuery("#header #icons #thumbs").click(function() {
     jQuery("#content #thumbs").slideToggle();
+    jQuery("#content #images").slideUp();
   });
   
+  // Invert colors
+  jQuery("#header #icons #change-color").click(function() {
+    jQuery('body').toggleClass('inverted');
+  });
+    
   
   
   

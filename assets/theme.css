@@ -8,6 +8,17 @@ a, a:visited {
 }
 
 
+body.inverted {
+  background: #000;
+  color: #fff;
+}
+body.inverted a, body.inverted a:visited {
+  color: #fff;
+}
+
+
+
+
 /* Header
 */
 

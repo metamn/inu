@@ -83,6 +83,11 @@ body {
 */
 
 
+header h1 {
+  padding-bottom: 0;
+}
+
+
 .line {
   width: 10em;
   border-bottom: 1px solid;
@@ -95,8 +100,24 @@ body {
 }
 
 
+nav ul, nav #icons {
+  width: auto;
+  float: left;
+}
 nav ul {
   list-style: none;
+  margin: 1.25em;
+  margin-left: 0;
+}
+nav li {
+  display: none;
+}
+nav li.active {
+  display: block;
+}
+nav li:hover h2 a {
+  background: #000;
+  color: #fff;
 }
 nav li h2 {
   padding: 0;
@@ -108,7 +129,14 @@ nav li.spacer{
 
 
 #icons {
-  display: none;
+  font-size: 200%;
+  cursor: pointer;
+  
+  position: relative;
+  top: .5em;
+}
+#icons span {
+  margin-right: .3125em;
 }
 #menu {
   -moz-transform: rotate(90deg);  
@@ -116,14 +144,18 @@ nav li.spacer{
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  display: inline-block;
-  
-  margin: .625em .625em 0 2.5em;
-  position: relative;
-  top: .156em;
+  display: inline-block;  
 }
-h2 span {
-  cursor: pointer;
+#thumbs {
+  position: relative;
+  top: -.156em;
+}
+#change-color {
+  position: relative;
+  top: -3px;
+}
+#change-color:after {
+  content: '\2600';
 }
 
 

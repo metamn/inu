@@ -22,14 +22,14 @@ jQuery(document).ready(function(){
   jQuery("#header #icons #change-color").click(function() {
     jQuery('body').toggleClass('inverted');
     if (jQuery('body').hasClass('inverted')) {
-      jQuery.cookie('inverted-color-scheme', 'true')
+      jQuery.cookie('color-scheme', 'inverted', { path: '/' })
     } else {
-      jQuery.removeCookie('inverted-color-scheme');
+      jQuery.removeCookie('color-scheme', { path: '/' });
     }
   });
   
   // Set color scheme based on cookies
-  if (jQuery.cookie('inverted-color-scheme')) {
+  if (jQuery.cookie('color-scheme')) {
     jQuery('body').addClass('inverted');
   }
     
@@ -84,9 +84,14 @@ jQuery(document).ready(function(){
   }
   // Do the scroll  
   function scroll(first, next) {
-    animation(first);     
-    next.addClass('active');  
-    next.removeClass('inactive');      
+    animation(first);   
+    if (next.length == 0) {
+      jQuery("#categories li").show('slow');
+      jQuery("#content").slideUp();
+    } else {
+      next.addClass('active');  
+      next.removeClass('inactive');
+    }
   }
   
 });

@@ -106,8 +106,7 @@ nav ul, nav #icons {
 }
 nav ul {
   list-style: none;
-  margin: 1.25em;
-  margin-left: 0;
+  margin: 1.25em 3.75em 1.25em 0;
 }
 nav li {
   display: none;
